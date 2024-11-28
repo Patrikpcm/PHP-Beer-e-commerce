@@ -1,3 +1,15 @@
+<?php
+
+    session_start(); //iniciando as variáveis de sessão para podermos ter acesso
+    if(!isset($_SESSION['email'])){ 
+        $logado = 0;; //Decidindo qual dropdown será exibido para o usuário
+    }
+
+    //area para recuperar o erro de falha de login
+	$erro = isset($_GET['erro']) ? $_GET['erro'] : 0;
+	$registrado = isset($_GET['registrado']) ? $_GET['registrado'] : 0;
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -6,10 +18,9 @@
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
     <!--Título-->
-    <title>Barûk Alkh - O Pub de Khazad-dûm!</title>
+    <title>Barûk Alkh - O Pub de Khazad-Dûm!</title>
 </head>
 <body>
     <header>
@@ -35,14 +46,13 @@
                             Cervejas por estilo
                             </a>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="produtos.html">Sesion</a></li>
+                                <li><a class="dropdown-item" href="produtos.html">Session</a></li>
                                 <li><a class="dropdown-item" href="produtos.html">IPA</a></li>
                                 <li><a class="dropdown-item" href="produtos.html">Imperial IPA</a></li>
                                 <li><a class="dropdown-item" href="produtos.html">American Blonde Ale</a></li>
                                 <li><a class="dropdown-item" href="produtos.html">American IPA</a></li>
                                 <li><a class="dropdown-item" href="produtos.html">Belgian</a></li>
                                 <li><a class="dropdown-item" href="produtos.html">Imperial Stout</a></li>
-                                <li><a class="dropdown-item" href="produtos.html">Imperial IPA</a></li>
                                 <li><a class="dropdown-item" href="produtos.html">Session IPA</a></li>
                                 <li><a class="dropdown-item" href="produtos.html">Weizer Bier</a></li>
                                 <li><a class="dropdown-item" href="produtos.html">Pilsen</a></li>
@@ -58,7 +68,6 @@
                                         belgian strong golden ale
                                         american blonde ale
                                         imperial stout
-                                        imperial ipa
                                         session ipa
                                         weizen bier
                                         pilsen
@@ -75,9 +84,38 @@
                         <button class="btn btn-search" type="submit">Escavar</button>
                     </form>
                     <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                        <li class="nav-item">
-                            <a class="nav-link" href="#"> <i class="fa-solid fa-right-to-bracket fa-xs me-1"></i> Conta </a>
+                
+                       <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false"> <i class="fa-solid fa-right-to-bracket fa-xs me-1"></i> Conta </a>
+                         
+                            <ul class="dropdown-menu <?= $erro==1 || $registrado==1 ? 'show' : '' ?>"> <!--Usando tag curta para adicionar a classe 'show' para que o menu volte aberto em qualquer um dos casos-->
+                                <div class="col-md-12">
+                                    <form id="form_login" action="validar_acesso.php" method="post">
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" id="campo_email" name="email" placeholder="Email" />
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="password" class="form-control red" id="campo_senha" name="senha" placeholder="Senha" />
+                                        </div>
+                                        <button type="buttom" class="btn btn-search mt-2 ms-1" id="btn_login">Entrar</button>
+                                        <button type="buttom" class="btn btn-light mt-2 ms-1" id="btn_login">Cadastrar</button>
+
+                                        <?php
+                                            if($erro == 1){
+                                                echo '<font color="#FF0000">Usuário ou senha inválidos</font> ';
+                                            }
+
+                                            if($registrado == 1){
+                                                echo '<font color="#0000CD">Bem vindo! Efetue login com suas credenciais.</font> ';
+                                            }
+                                        
+							            ?>
+                                    </form>
+                                </div>
+                            </ul>
+                            
                         </li>
+                        
                         <li class="nav-item">
                             <a class="nav-link ms-2" href="#"><i class="fa-solid fa-cart-shopping fa-xs me-1"></i> Geladeira </a>
                         </li>
@@ -90,21 +128,21 @@
     <section id="home">
         <div class="home-wrap">
 
-            <img class="home-bg" style="background-size: cover; background-repeat: no-repeat;" src="assets/img/bn_dwarfs.jpeg"alt="">
+            <img class="home-bg" src="assets/img/bn_dwarfs.jpeg"alt="">
         
             <div class="home-content">
                 <div class="container">
                     <div class="row d-flex align-items-center" style="margin-top: 1%;">
                         <div class="col-md-12">
                             <div class="d-flex justify-content-center">
-                                <h1> <strong class="home-text">Barûk Alkh - O Pub de Khazad-dûm!</strong></h1>             
+                                <h1> <strong class="home-text">Barûk Alkh - O Pub de Khazad-Dûm!</strong></h1>             
                             </div>
                         </div>
                     </div>
-                    <div class="row d-flex align-items-center" style="margin-top: 1%; margin-bottom: 2%;">
+                    <div class="row d-flex align-items-center" style="margin-bottom: 1%;">
                         <div class="col-md-12">
                             <div class="d-flex justify-content-center">
-                                <img src="assets/img/grey_beard.jpeg" width="25%" alt="">
+                                <img src="assets/img/Baruk-Alkh_logo.png" width="25%" alt="">
                             </div>
                         </div>
                     </div>
@@ -120,7 +158,7 @@
             <div class="row mt-5 mb-3">
                 <div class="col-md-12 d-flex justify-content-around">
                     <div class="">
-                        <i class="me-2 fa-solid fa-truck fa-2x"></i>
+                        <img src="assets/img/deliver.svg" class="me-1" height="35px" alt="">
                         Entrega para toda Khazad-Dûm
                     </div>
                     <div class="">
@@ -129,7 +167,7 @@
                     </div>
                     <div class="">
                         <i class="me-2 fa-solid fa-credit-card fa-2x"></i>
-                        Parcelamento em até 3x no Cartão dos Anões
+                        Parcelamento em até 3x na Promissória dos Anões
                     </div>
                 </div>
             </div>
@@ -474,6 +512,7 @@
      <!--Javascript-->
      <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
      <script type="text/Javascript" src="assets/js/scripts.js"></script>
     
      <!--Estilo CSS-->

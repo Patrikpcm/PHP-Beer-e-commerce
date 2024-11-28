@@ -43,7 +43,6 @@
                                 <li><a class="dropdown-item" href="produtos.html">American IPA</a></li>
                                 <li><a class="dropdown-item" href="produtos.html">Belgian</a></li>
                                 <li><a class="dropdown-item" href="produtos.html">Imperial Stout</a></li>
-                                <li><a class="dropdown-item" href="produtos.html">Imperial IPA</a></li>
                                 <li><a class="dropdown-item" href="produtos.html">Session IPA</a></li>
                                 <li><a class="dropdown-item" href="produtos.html">Weizer Bier</a></li>
                                 <li><a class="dropdown-item" href="produtos.html">Pilsen</a></li>
@@ -116,10 +115,6 @@
                                     <div class="form-check">
                                         <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
                                         <label class="form-check-label" for="flexCheckDefault"> Imperial Stout </label>
-                                    </div>
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                        <label class="form-check-label" for="flexCheckDefault"> Imperial IPA </label>
                                     </div>
                                     <div class="form-check">
                                         <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">

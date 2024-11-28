@@ -31,6 +31,7 @@ body{
 .nav-link{
     color:gold;
     font-family: "Pirata One", system-ui!important;
+    text-shadow: black 0em 0em 0.1em;
     font-size: 1.3em;
 }
 .nav-link:hover{
@@ -76,6 +77,8 @@ li > .show{
     margin-top: -80px;
     margin-left: -5%;
     width: 110%;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 h1,h2,h3,h4,h5 > strong{
@@ -92,7 +95,9 @@ h1,h2,h3,h4,h5 > strong{
 }
 
 .home-text{
-    color: white;
+    color: gold;
+    border-bottom: 5px solid rgb(46, 22, 8);
+    text-shadow: black 0em 0em 0.1em;
 }
 
 /*  RODAPÉ  */
