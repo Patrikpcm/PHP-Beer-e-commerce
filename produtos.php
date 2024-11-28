@@ -72,7 +72,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12 d-flex justify-content-end">
-                    <a href="index.html" class="nav-link mt-3"><i class="fa-solid fa-arrow-left fa-lg me-2"></i> Voltar</a>
+                    <a href="index.php" class="nav-link mt-3"><i class="fa-solid fa-arrow-left fa-lg me-2"></i> Voltar</a>
                 </div>
             </div>
         </div>
