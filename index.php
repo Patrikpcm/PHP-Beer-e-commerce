@@ -1,10 +1,8 @@
 <?php
-
     session_start(); //iniciando as variáveis de sessão para podermos ter acesso
-    if(!isset($_SESSION['email'])){ 
-        $logado = 0;; //Decidindo qual dropdown será exibido para o usuário
-    }
 
+    !isset($_SESSION['email']) ? $logado = 0 : $logado=1; //Define qual dropdown será exibido para o usuário
+    
     //area para recuperar o erro de falha de login
 	$erro = isset($_GET['erro']) ? $_GET['erro'] : 0;
 	$registrado = isset($_GET['registrado']) ? $_GET['registrado'] : 0;
@@ -61,7 +59,7 @@
                                 
                                 <!--filtros
                                     por estilo:
-                                        sesion
+                                        session
                                         ipa
                                         imperial ipa
                                         american india pale ale
@@ -92,13 +90,15 @@
                                     echo '  <ul class="dropdown-menu"> 
                                                 <li><a class="dropdown-item" href="minha_conta.html">Minha Conta</a></li>
                                                 <li><a class="dropdown-item" href="produtos.html">Meus pedidos</a></li>
-                                                <button class="btn btn-search mt-2 d-flex align-self-center">Sair</button>                                        
+                                                <form action="logout.php" method="POST">
+                                                    <button type="submit" class="btn btn-search mt-2 ms-3">Sair</button>                                        
+                                                </form>
                                             </ul>';
                                 }
                                 else{
                                     echo '<ul class="dropdown-menu '; if($erro==1 || $registrado==1){echo 'show';} echo'">
                                         <div class="col-md-12">
-                                            <form id="form_login" action="validar_acesso.php" method="post">
+                                            <form id="form_login" action="login.php" method="POST">
                                                 <div class="form-group">
                                                     <input type="text" class="form-control" id="campo_email" name="email" placeholder="Email" />
                                                 </div>
@@ -109,10 +109,10 @@
                                                 <a href="cadastrese.php" role="buttom" class="btn btn-light mt-2 ms-1">Cadastrar</a>';
                                                 
                                                 if($erro == 1){
-                                                    echo '<font color="#FF0000">Usuário ou senha inválidos</font> ';
+                                                    echo '<p class="ms-1 mt-3" style="color:#FF0000">Usuário ou senha inválidos</p> ';
                                                 }
                                                 if($registrado == 1){
-                                                    echo '<font color="#0000CD">Bem vindo! Efetue login com suas credenciais.</font> ';
+                                                    echo '<p class="ms-2 mt-3" style="color:#0000CD">Bem vindo! Efetue login com suas credenciais.</font> ';
                                                 }
                                              echo '   
                                             </form>

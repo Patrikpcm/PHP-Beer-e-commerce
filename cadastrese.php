@@ -23,11 +23,11 @@
     <header>
         <nav class="navbar navbar-expand-lg nav-bg"><!--data-bs-theme="dark"-->
             <div class="container">
-                <a class="navbar-brand me-5" href="#">BARÛK ALKH</a>
+                <a class="navbar-brand me-5" href="index.php">BARÛK ALKH</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <a href="index.html" class="nav-link" > Voltar</a>
+                <a href="index.php" class="nav-link" > Voltar</a>
             </div>
         </nav>
     </header>
@@ -63,7 +63,7 @@
                                         </div>
                                         <?php
                                             if($erro_email)
-                                                echo '<p class="" style="color:#FF0000">O email informado já esta cadastrado.</p>';
+                                                echo '<p class="mt-2 text-center" style="color:#FF0000">O email informado já esta cadastrado.</p>';
                                         ?>
                                     </div>
                                     

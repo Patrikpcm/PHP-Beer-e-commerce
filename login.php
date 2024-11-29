@@ -1,6 +1,5 @@
 <?php
-
-    session_start();
+session_start();
 
     require_once('bd.class.php');
 
@@ -38,9 +37,11 @@
             //echo 'Usuário existe!';
 
             //superglobal session recebendo informações de dados_usuário  
+            $_SESSION['id_usuario'] = $dados_usuario['id_usuario'];
             $_SESSION['email'] = $dados_usuario['email'];
-            $_SESSION['id_usuario'] = $dados_usuario['id'];
-            header('Location: index.php?logado=1');
+            //echo $_SESSION['email'];
+            //echo $_SESSION['id_usuario'];
+            header('Location: index.php');
         }
         else{
             header('Location: index.php?erro=1'); //função header força o redirecionamento para uma página
