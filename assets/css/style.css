@@ -139,9 +139,23 @@ h1,h2,h3,h4,h5 > strong{
     border: 0;
  }
 
- .form-check-input:focus, .label::after, label.form-check-label:focus, .form-check-input::after, .form-check-input:not(:disabled):not(.disabled):active:focus {
+.form-check-input:focus, .label::after, label.form-check-label:focus, .form-check-input::after, .form-check-input:not(:disabled):not(.disabled):active:focus {
     color: black;
     outline: 0;
     border: 0;
     box-shadow: 0 0 0 0.1rem white !important;
- }
+}
+
+.card{
+    border: 2px solid gold;
+    border-radius: 10px;
+    box-shadow: rgb(250, 252, 179) 0em 0em 0.5em;
+    background: radial-gradient(rgb(240, 219, 103), rgba(161, 140, 80, 0.76));
+}
+
+.card-preco{
+    font-size: 1.8em;
+    color: brown;
+    border-bottom: 1px solid gold;
+
+}
