@@ -29,14 +29,14 @@ INSERT INTO produtos VALUES(
 
 INSERT INTO produtos VALUES(
     null,
-    'Ori Belgian Strong Golden Ale',
+    'Ori Belgian Strong Ale',
     'Uma Belgian Strong Golden Ale com teor álcoolico moderado para os Anões.
      Possuí notas de frutas secas, especiarias e mel. Fermentada com leveduras
      originadas do norte da Terra Média. Altamente carbonatada.',
     20,
     12,
     'cerveja',
-    'Belgian Strong Golden Ale',
+    'Belgian',
     55.90,
     'assets/img/garrafa_BELGIAN_STRONG_GOLDEN_ALE.png'
 );

@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
@@ -36,18 +35,17 @@
                             Cervejas por estilo
                             </a>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="produtos.html">Sesion</a></li>
-                                <li><a class="dropdown-item" href="produtos.html">IPA</a></li>
-                                <li><a class="dropdown-item" href="produtos.html">Imperial IPA</a></li>
-                                <li><a class="dropdown-item" href="produtos.html">American Blonde Ale</a></li>
-                                <li><a class="dropdown-item" href="produtos.html">American IPA</a></li>
-                                <li><a class="dropdown-item" href="produtos.html">Belgian</a></li>
-                                <li><a class="dropdown-item" href="produtos.html">Imperial Stout</a></li>
-                                <li><a class="dropdown-item" href="produtos.html">Session IPA</a></li>
-                                <li><a class="dropdown-item" href="produtos.html">Weizer Bier</a></li>
-                                <li><a class="dropdown-item" href="produtos.html">Pilsen</a></li>
-                                <li><a class="dropdown-item" href="produtos.html">Double IPA</a></li>
-                                <li><a class="dropdown-item" href="produtos.html">Weiss</a></li>
+                                <li><a class="dropdown-item" href="produtos.php?tipo=IPA">IPA</a></li>
+                                <li><a class="dropdown-item" href="produtos.php?tipo=Imperial IPA">Imperial IPA</a></li>
+                                <li><a class="dropdown-item" href="produtos.php?tipo=American Blonde Ale">American Blonde Ale</a></li>
+                                <li><a class="dropdown-item" href="produtos.php?tipo=American IPA">American IPA</a></li>
+                                <li><a class="dropdown-item" href="produtos.php?tipo=Belgian">Belgian</a></li>
+                                <li><a class="dropdown-item" href="produtos.php?tipo=Imperial Stout">Imperial Stout</a></li>
+                                <li><a class="dropdown-item" href="produtos.php?tipo=Session IPA">Session IPA</a></li>
+                                <li><a class="dropdown-item" href="produtos.php?tipo=Weizer Bier">Weizer Bier</a></li>
+                                <li><a class="dropdown-item" href="produtos.php?tipo=Pilsen">Pilsen</a></li>
+                                <li><a class="dropdown-item" href="produtos.php?tipo=Double IPA">Double IPA</a></li>
+                                <li><a class="dropdown-item" href="produtos.php?tipo=Weiss">Weiss</a></li>
                             </ul>
                         </li>
                     </ul>
@@ -89,52 +87,48 @@
                                 <h5 class="mt-4"><strong> Por estilo: </strong></h5>
                                 <div class="box-padding-filtros">
                                     <div class="form-check">
-                                        <input class="form-check-input custom-checkbox" type="checkbox" value="" id="flexCheckDefault">
-                                        <label class="form-check-label custom-checkbox" for="flexCheckDefault"> Sesion </label>
+                                        <input class="form-check-input" type="checkbox" value="IPA" id="IPA">
+                                        <label class="form-check-label" for="IPA"> IPA </label>
                                     </div>
                                     <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                        <label class="form-check-label" for="flexCheckDefault"> IPA </label>
+                                        <input class="form-check-input" type="checkbox" value="Imperial IPA" id="ImperialIPA">
+                                        <label class="form-check-label" for="ImperialIPA"> Imperial IPA </label>
                                     </div>
                                     <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                        <label class="form-check-label" for="flexCheckDefault"> Imperial IPA </label>
+                                        <input class="form-check-input" type="checkbox" value="American IPA" id="AmericanIPA">
+                                        <label class="form-check-label" for="AmericanIPA"> American IPA </label>
                                     </div>
                                     <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                        <label class="form-check-label" for="flexCheckDefault"> American IPA </label>
+                                        <input class="form-check-input" type="checkbox" value="American Blonde Ale" id="AmericanBlondeAle">
+                                        <label class="form-check-label" for="AmericanBlondeAle"> American Blonde Ale </label>
                                     </div>
                                     <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                        <label class="form-check-label" for="flexCheckDefault"> American Blonde Ale </label>
+                                        <input class="form-check-input" type="checkbox" value="Belgian" id="Belgian">
+                                        <label class="form-check-label" for="Belgian"> Belgian </label>
                                     </div>
                                     <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                        <label class="form-check-label" for="flexCheckDefault"> Belgian </label>
+                                        <input class="form-check-input" type="checkbox" value="Emperial Stout" id="ImperialStout">
+                                        <label class="form-check-label" for="ImperialStout"> Imperial Stout </label>
                                     </div>
                                     <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                        <label class="form-check-label" for="flexCheckDefault"> Imperial Stout </label>
+                                        <input class="form-check-input" type="checkbox" value="Session IPA" id="SessionIPA">
+                                        <label class="form-check-label" for="SessionIPA"> Session IPA </label>
                                     </div>
                                     <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                        <label class="form-check-label" for="flexCheckDefault"> Session IPA </label>
+                                        <input class="form-check-input" type="checkbox" value="Weizen Bier" id="WeizenBier">
+                                        <label class="form-check-label" for="WeizenBier"> Weizen Bier </label>
                                     </div>
                                     <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                        <label class="form-check-label" for="flexCheckDefault"> Weizen Bier </label>
+                                        <input class="form-check-input" type="checkbox" value="Pilsen" id="Pilsen">
+                                        <label class="form-check-label" for="Pilsen"> Pilsen </label>
                                     </div>
                                     <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                        <label class="form-check-label" for="flexCheckDefault"> Pilsen </label>
+                                        <input class="form-check-input" type="checkbox" value="Double IPA" id="DoubleIPA">
+                                        <label class="form-check-label" for="DoubleIPA"> Double IPA </label>
                                     </div>
                                     <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                        <label class="form-check-label" for="flexCheckDefault"> Double IPA </label>
-                                    </div>
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                        <label class="form-check-label" for="flexCheckDefault"> Weiss </label>
+                                        <input class="form-check-input" type="checkbox" value="Weiss" id="Weiss">
+                                        <label class="form-check-label" for="Weiss"> Weiss </label>
                                     </div>
                                     <!--filtros
                                     por estilo:
@@ -239,24 +233,9 @@
                 <!--Area de exibição dos produtos-->
                 <div class="col-md-9">
                     <div class="row row-cols-1 row-cols-md-3 g-3" id="lista_produtos">
-                         <!--<div class="col">
-                            <div class="card">
-                                <img src="assets/img/bottle.png" class="card-img-top w-25 align-self-center" alt="...">
-                                <div class="card-body">
-                                    <h5 class="card-title">Card title</h5>
-                                    <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                                </div>
-                                <ul class="list-group list-group-flush">
-                                    <li class="list-group-item">An item</li>
-                                    <li class="list-group-item">A second item</li>
-                                    <li class="list-group-item">A third item</li>
-                                </ul>
-                                <div class="card-body">
-                                    <a href="#" class="card-link">Card link</a>
-                                    <a href="#" class="card-link">Another link</a>
-                                </div>
-                            </div> 
-                        </div> Fim da coluna-->        
+                         
+                        <!--Aqui serão inseridos os cards com informações dos produtos-->        
+
                     </div> <!--Fim da row dos cards-->
                     
                 </div>
@@ -346,7 +325,7 @@
      <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
      <script type="text/Javascript" src="assets/js/scripts.js"></script>
-     <script type="text/javascript" src="assets/js/produtos.js"></script>
+     <script type="text/Javascript" src="assets/js/produtos.js"></script>
     
      <!--Estilo CSS-->
      <link rel="stylesheet" href="assets/css/style.css" type="text/css">

@@ -150,7 +150,7 @@ h1,h2,h3,h4,h5 > strong{
     border: 2px solid gold;
     border-radius: 10px;
     box-shadow: rgb(250, 252, 179) 0em 0em 0.5em;
-    background: radial-gradient(rgb(240, 219, 103), rgba(161, 140, 80, 0.76));
+    background: radial-gradient(rgb(240, 219, 103), rgba(151, 132, 81, 0.76));
 }
 
 .card-preco{
@@ -158,4 +158,12 @@ h1,h2,h3,h4,h5 > strong{
     color: brown;
     border-bottom: 1px solid gold;
 
+}
+
+.text-hide{
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow:ellipsis;
+    max-width: 100%;
 }

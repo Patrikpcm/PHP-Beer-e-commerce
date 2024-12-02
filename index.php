@@ -44,18 +44,17 @@
                             Cervejas por estilo
                             </a>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="produtos.php">Session</a></li>
-                                <li><a class="dropdown-item" href="produtos.php">IPA</a></li>
-                                <li><a class="dropdown-item" href="produtos.php">Imperial IPA</a></li>
-                                <li><a class="dropdown-item" href="produtos.php">American Blonde Ale</a></li>
-                                <li><a class="dropdown-item" href="produtos.php">American IPA</a></li>
-                                <li><a class="dropdown-item" href="produtos.php">Belgian</a></li>
-                                <li><a class="dropdown-item" href="produtos.php">Imperial Stout</a></li>
-                                <li><a class="dropdown-item" href="produtos.php">Session IPA</a></li>
-                                <li><a class="dropdown-item" href="produtos.php">Weizer Bier</a></li>
-                                <li><a class="dropdown-item" href="produtos.php">Pilsen</a></li>
-                                <li><a class="dropdown-item" href="produtos.php">Double IPA</a></li>
-                                <li><a class="dropdown-item" href="produtos.php">Weiss</a></li>
+                                <li><a class="dropdown-item" href="produtos.php?tipo='IPA'">IPA</a></li>
+                                <li><a class="dropdown-item" href="produtos.php?tipo='Imperial IPA'">Imperial IPA</a></li>
+                                <li><a class="dropdown-item" href="produtos.php?tipo='American Blonde Ale'">American Blonde Ale</a></li>
+                                <li><a class="dropdown-item" href="produtos.php?tipo='American IPA'">American IPA</a></li>
+                                <li><a class="dropdown-item" href="produtos.php?tipo='Belgian'">Belgian</a></li>
+                                <li><a class="dropdown-item" href="produtos.php?tipo='Imperial Stout'">Imperial Stout</a></li>
+                                <li><a class="dropdown-item" href="produtos.php?tipo='Session IPA'">Session IPA</a></li>
+                                <li><a class="dropdown-item" href="produtos.php?tipo='Weizer Bier'">Weizer Bier</a></li>
+                                <li><a class="dropdown-item" href="produtos.php?tipo='Pilsen'">Pilsen</a></li>
+                                <li><a class="dropdown-item" href="produtos.php?tipo='Double IPA'">Double IPA</a></li>
+                                <li><a class="dropdown-item" href="produtos.php?tipo='Weiss'">Weiss</a></li>
                                 
                                 <!--filtros
                                     por estilo:
