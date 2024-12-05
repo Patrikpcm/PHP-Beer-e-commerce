@@ -84,160 +84,157 @@
                         <div class="col-md-12">
                             <div class="box-filtros">
                                 <h2>Filtros</h2>
-                                <h5 class="mt-4"><strong> Por estilo: </strong></h5>
-                                <div class="box-padding-filtros">
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" value="IPA" id="IPA">
-                                        <label class="form-check-label" for="IPA"> IPA </label>
-                                    </div>
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" value="Imperial IPA" id="ImperialIPA">
-                                        <label class="form-check-label" for="ImperialIPA"> Imperial IPA </label>
-                                    </div>
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" value="American IPA" id="AmericanIPA">
-                                        <label class="form-check-label" for="AmericanIPA"> American IPA </label>
-                                    </div>
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" value="American Blonde Ale" id="AmericanBlondeAle">
-                                        <label class="form-check-label" for="AmericanBlondeAle"> American Blonde Ale </label>
-                                    </div>
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" value="Belgian" id="Belgian">
-                                        <label class="form-check-label" for="Belgian"> Belgian </label>
-                                    </div>
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" value="Emperial Stout" id="ImperialStout">
-                                        <label class="form-check-label" for="ImperialStout"> Imperial Stout </label>
-                                    </div>
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" value="Session IPA" id="SessionIPA">
-                                        <label class="form-check-label" for="SessionIPA"> Session IPA </label>
-                                    </div>
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" value="Weizen Bier" id="WeizenBier">
-                                        <label class="form-check-label" for="WeizenBier"> Weizen Bier </label>
-                                    </div>
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" value="Pilsen" id="Pilsen">
-                                        <label class="form-check-label" for="Pilsen"> Pilsen </label>
-                                    </div>
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" value="Double IPA" id="DoubleIPA">
-                                        <label class="form-check-label" for="DoubleIPA"> Double IPA </label>
-                                    </div>
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" value="Weiss" id="Weiss">
-                                        <label class="form-check-label" for="Weiss"> Weiss </label>
-                                    </div>
-                                    <!--filtros
-                                    por estilo:
-                                        sesion
-                                        ipa
-                                        imperial ipa
-                                        american india pale ale
-                                        belgian strong golden ale
-                                        american blonde ale
-                                        imperial stout
-                                        imperial ipa
-                                        session ipa
-                                        weizen bier
-                                        pilsen
-                                        double ipa
-                                        weiss -->
-                                </div> <!--Fim da div por estilo-->
-                                <br>
-                                <h5><strong> Por IBU: </strong></h5>
-                                <div class="box-padding-filtros">
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                        <label class="form-check-label" for="flexCheckDefault"> 10 a 30 IBU </label>
-                                    </div>
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                        <label class="form-check-label" for="flexCheckDefault"> 30 a 60 IBU </label>
-                                    </div>
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                        <label class="form-check-label" for="flexCheckDefault"> 30 a 90 IBU </label>
-                                    </div>
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                        <label class="form-check-label" for="flexCheckDefault"> + 90 IBU </label>
-                                    </div>
-                                    <!--por IBU
-                                        10 a 30 IBU
-                                        30 a 60 IBU
-                                        60 a 90 IBU
-                                        + 90 IBU-->
-                                </div> <!--Fim div por IBU-->
+                                <form id="form-filtros" name="form-filtros" action="">
+                                    <h5 class="mt-4"><strong> Por estilo: </strong></h5>
+                                    <div class="box-padding-filtros">
+                                        <div class="form-check">
+                                            <input class="form-check-input" name="estilo" type="checkbox" value="IPA" id="IPA">
+                                            <label class="form-check-label" for="IPA"> IPA </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" name="estilo" type="checkbox" value="Imperial IPA" id="ImperialIPA">
+                                            <label class="form-check-label" for="ImperialIPA"> Imperial IPA </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" name="estilo" type="checkbox" value="American IPA" id="AmericanIPA">
+                                            <label class="form-check-label" for="AmericanIPA"> American IPA </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" name="estilo" type="checkbox" value="American Blonde Ale" id="AmericanBlondeAle">
+                                            <label class="form-check-label" for="AmericanBlondeAle"> American Blonde Ale </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" name="estilo" type="checkbox" value="Belgian" id="Belgian">
+                                            <label class="form-check-label" for="Belgian"> Belgian </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" name="estilo" type="checkbox" value="Emperial Stout" id="ImperialStout">
+                                            <label class="form-check-label" for="ImperialStout"> Imperial Stout </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" name="estilo" type="checkbox" value="Session IPA" id="SessionIPA">
+                                            <label class="form-check-label" for="SessionIPA"> Session IPA </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" name="estilo" type="checkbox" value="Weizen Bier" id="WeizenBier">
+                                            <label class="form-check-label" for="WeizenBier"> Weizen Bier </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" name="estilo" type="checkbox" value="Pilsen" id="Pilsen">
+                                            <label class="form-check-label" for="Pilsen"> Pilsen </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" name="estilo" type="checkbox" value="Double IPA" id="DoubleIPA">
+                                            <label class="form-check-label" for="DoubleIPA"> Double IPA </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" name="estilo" type="checkbox" value="Weiss" id="Weiss">
+                                            <label class="form-check-label" for="Weiss"> Weiss </label>
+                                        </div>
+                                        <!--filtros
+                                        por estilo:
+                                            sesion
+                                            ipa
+                                            imperial ipa
+                                            american india pale ale
+                                            belgian strong golden ale
+                                            american blonde ale
+                                            imperial stout
+                                            imperial ipa
+                                            session ipa
+                                            weizen bier
+                                            pilsen
+                                            double ipa
+                                            weiss -->
+                                    </div> <!--Fim da div por estilo-->
+                                    <br>
+                                    <h5><strong> Por IBU: </strong></h5>
+                                    <div class="box-padding-filtros">
+                                        <div class="form-check">
+                                            <input class="form-check-input" name="ibu" type="checkbox" value="10-30" id="10-30">
+                                            <label class="form-check-label" for="10-30"> 10 a 30 IBU </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" name="ibu" type="checkbox" value="30-60" id="30-60">
+                                            <label class="form-check-label" for="30-60"> 30 a 60 IBU </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" name="ibu" type="checkbox" value="30-90" id="30-90">
+                                            <label class="form-check-label" for="30-90"> 30 a 90 IBU </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" name="ibu" type="checkbox" value="90-mais" id="90-mais">
+                                            <label class="form-check-label" for="90-mais"> 90+ IBU </label>
+                                        </div>
+                                        <!--por IBU
+                                            10 a 30 IBU
+                                            30 a 60 IBU
+                                            60 a 90 IBU
+                                            + 90 IBU-->
+                                    </div> <!--Fim div por IBU-->
 
-                                <br>
-                                <h5><strong> Por ABV:</strong></h5>
-                                <div class="box-padding-filtros">
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                        <label class="form-check-label" for="flexCheckDefault"> 1 a 7 % </label>
-                                    </div>
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                        <label class="form-check-label" for="flexCheckDefault"> 7 a 10 % </label>
-                                    </div>
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                        <label class="form-check-label" for="flexCheckDefault"> + 10 %</label>
-                                    </div>
-                                    <!--por ABV
-                                        4 a 7 %
-                                        7 a 10 %
-                                        + 10 %-->
-                                </div> <!--Fim div por ABV-->
+                                    <br>
+                                    <h5><strong> Por ABV:</strong></h5>
+                                    <div class="box-padding-filtros">
+                                        <div class="form-check">
+                                            <input class="form-check-input" name="abv" type="checkbox" value="1-7" id="1-7">
+                                            <label class="form-check-label" for="1-7"> 1 a 7 % </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" name="abv" type="checkbox" value="7-20" id="7-20">
+                                            <label class="form-check-label" for="7-20"> 7 a 20 % </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" name="abv" type="checkbox" value="20-mais" id="20-mais">
+                                            <label class="form-check-label" for="20-mais"> + 20 %</label>
+                                        </div>
+                                        <!--por ABV
+                                            4 a 7 %
+                                            7 a 10 %
+                                            + 10 %-->
+                                    </div> <!--Fim div por ABV-->
 
-                                <br>
-                                
-                                <h5><strong> Por preço: </strong></h5>
-                                <div class="box-padding-filtros">
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                        <label class="form-check-label" for="flexCheckDefault"> de R$1 a R$14,99 </label>
-                                    </div>
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                        <label class="form-check-label" for="flexCheckDefault"> de R$15 a R$30,99 </label>
-                                    </div>
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                        <label class="form-check-label" for="flexCheckDefault"> de R$31 a R$50,99 </label>
-                                    </div>
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                        <label class="form-check-label" for="flexCheckDefault"> de R$51 a R$99,99 </label>
-                                    </div>
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                        <label class="form-check-label" for="flexCheckDefault"> a partir de R$100 </label>
-                                    </div>
-                                    <!-- por preço:
-                                        de 1 até 14,99
-                                        de 15 até 30,99
-                                        de 31 até 50,99
-                                        de 51 até 100,99
-                                        a partir de 101-->
-                                </div><!--Fim div Por preço-->
-                            </div> <!--Fim da div que contem todos os checkbox-->
+                                    <br>
+                                    
+                                    <h5><strong> Por preço: </strong></h5>
+                                    <div class="box-padding-filtros">
+                                        <div class="form-check">
+                                            <input class="form-check-input" name="preco" type="checkbox" value="1-15" id="1-15">
+                                            <label class="form-check-label" for="1-15"> de R$1 a R$15 </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" name="preco" type="checkbox" value="15-30" id="15-30">
+                                            <label class="form-check-label" for="15-30"> de R$15 a R$30 </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" name="preco" type="checkbox" value="30-50" id="30-50">
+                                            <label class="form-check-label" for="30-50"> de R$30 a R$50 </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" name="preco" type="checkbox" value="50-100" id="50-100">
+                                            <label class="form-check-label" for="50-100"> de R$50 a R$100 </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" name="preco" type="checkbox" value="100-mais" id="100-mais">
+                                            <label class="form-check-label" for="100-mais"> a partir de R$100 </label>
+                                        </div>
+                                        <!-- por preço:
+                                            de 1 até 14,99
+                                            de 15 até 30,99
+                                            de 31 até 50,99
+                                            de 51 até 100,99
+                                            a partir de 101-->
+                                    </div><!--Fim div Por preço-->
+                                </div> <!--Fim da div que contem todos os checkbox-->
+                            </form>
                         </div> <!--Fim da div col-md-12-->
-                    </div> <!--fim da row-->
-                    
+                    </div> <!--fim da row--> 
                 </div>
                    
                 <!--Area de exibição dos produtos-->
-                <div class="col-md-9">
-                    <div class="row row-cols-1 row-cols-md-3 g-3" id="lista_produtos">
+                <div class="col-md-9" id="lista_produtos">
                          
                         <!--Aqui serão inseridos os cards com informações dos produtos-->        
-
-                    </div> <!--Fim da row dos cards-->
-                    
                 </div>
             </div> <!--Fim da row-->
         </div><!--Fim do container-->
@@ -325,7 +322,7 @@
      <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
      <script type="text/Javascript" src="assets/js/scripts.js"></script>
-     <script type="text/Javascript" src="assets/js/produtos.js"></script>
+     <!--<script type="text/Javascript" src="assets/js/produtos.js"></script>-->
     
      <!--Estilo CSS-->
      <link rel="stylesheet" href="assets/css/style.css" type="text/css">

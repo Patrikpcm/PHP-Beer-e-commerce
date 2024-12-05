@@ -25,11 +25,31 @@ CREATE TABLE produtos(
     ibu TINYINT DEFAULT NULL,
     abv TINYINT DEFAULT NULL,
     categoria VARCHAR(10) DEFAULT 'cerveja',
-    tipo VARCHAR(50) DEFAULT NULL,
+    estilo VARCHAR(50) DEFAULT NULL,
     preco DECIMAL(15,2),
     foto VARCHAR(70)
 );
 
+/*
+Tabelas que contém os ids dos produtos que estão em promoção bem como
+o valor de desconto em cima do preço.
+*/
+CREATE TABLE promocoes(
+    id_produto INT UNSIGNED NOT NULL,
+    desconto DECIMAL(15,2),
+    CONSTRAINT id_produto_promo_fk
+    FOREIGN KEY (id_produto) REFERENCES produtos(id_produto)
+);
+
+/*
+Tabelas que contém os ids dos produtos que estão em promoção bem como
+o valor de desconto em cima do preço.
+*/
+CREATE TABLE lancamentos(
+    id_produto INT UNSIGNED NOT NULL,
+    CONSTRAINT id_produto_lancamento_fk
+    FOREIGN KEY (id_produto) REFERENCES produtos(id_produto)
+);
 
 /*
 Tabela que armazena as informações gerais dos pedidos de cada usuário

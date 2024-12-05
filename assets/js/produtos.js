@@ -15,13 +15,13 @@ $(window).on('load', function(){ //load para quando a pagina esta carregada
     else{
         console.log("Nenhum valor");
     }
-
+*/
     if (location.search.slice(1) != ''){
         var query = location.search.slice(1);
         var partes = query.split('&');
         var tipo = partes[0].split('=');
         console.log(tipo[1]);
-    }*/
+    }
 
     if (location.search.slice(1) == ''){
         $.ajax({ //capturando o nome da pessoa para pesquisar com ajax

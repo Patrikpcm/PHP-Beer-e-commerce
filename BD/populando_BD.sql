@@ -430,6 +430,18 @@ INSERT INTO produtos VALUES(
     'assets/img/ABRIDOR_GARRAFAS_DWARFES.png'
 );
 
+INSERT INTO produtos VALUES(
+    NULL,
+    'Cabo de machado com abridor',
+    'Um cabo para seu machado ou picareta, com um abridor de garrafas embutido na ponta.',
+    NULL,
+    NULL,
+    'acessório',
+    NULL,
+    92.00,
+    'assets/img/cabo_com_abridor.jpeg'
+);
+
 
 -- Populando usuários
 INSERT INTO usuarios VALUES(
@@ -479,7 +491,6 @@ INSERT INTO avaliacoes_produtos VALUES(
 );
 
 -- Populando os pedidos
-
 INSERT INTO pedidos_usuarios VALUES(
     NULL,
     1,
@@ -506,4 +517,38 @@ INSERT INTO pedidos_produtos VALUES(
     2,
     15.50,
     2
+);
+
+-- populando lançamentos
+INSERT INTO lancamentos VALUES(
+    21
+);
+
+INSERT INTO lancamentos VALUES(
+    18
+);
+
+INSERT INTO lancamentos VALUES(
+    17
+);
+
+-- populando promocoes
+INSERT INTO promocoes VALUES(
+    9,
+    5.0
+);
+
+INSERT INTO promocoes VALUES(
+    9,
+    5.0
+);
+
+INSERT INTO promocoes VALUES(
+    1,
+    7.0
+);
+
+INSERT INTO promocoes VALUES(
+    2,
+    10.0
 );
