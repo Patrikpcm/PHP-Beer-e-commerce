@@ -1,16 +1,12 @@
 $(window).on('load', function(){ //load para quando a pagina esta carregada
     
+    //caso o usuário acesse diretamente a página de produtos, sem nenhum filtro aplicado.
     if (location.search.slice(1) == ''){
-        $.ajax({
-            url: 'get_produtos.php',        
-            success: function(data){
-                $('#lista_produtos').html(data);
-            }
-        });
+        filtrar();
     }
     else{
         var tipo = location.search.slice(1).split('&');
-        //marca o tipo de cerveja clicado na index e que direcionou até a página.
+        //marca o tipo de cerveja clicado na index o qual direcionou até a página.
         $('input[value='+tipo+']').not(this).prop('checked', true); 
         //console.log(tipo[0]);
         filtrar();        

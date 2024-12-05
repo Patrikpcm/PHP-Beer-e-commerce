@@ -5,7 +5,6 @@
     $objDb = new bd(); //criando um novo objeto
     $link = $objDb->conecta_mysql();
 
-    
     $data = json_decode(stripslashes($_POST['data']));
     //var_dump($data);
     //echo $data[0]->name;
