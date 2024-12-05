@@ -183,247 +183,262 @@
     <section id="lancamentos">
         <div class="container" >
             <div class="row pt-2 mt-3 mb-2">
-                <hr class="custom-hr">
+                <h1><strong>Lançamentos</strong></h1>
             </div>
-            <div class="row d-flex">
-                <div class="col-md-3 align-items-center">
-                    <div class="col-md-12">
-                        <div >
-                            <h1 class="mt-3"><strong>Lançamentos</strong></h1>
-                            <img class="d-none d-md-block mt-4" src="assets/img/lancamento_dwarf.jpeg" width="100%"  alt="Anão com canecas de chopp">
+            <div class="row row-cols-1 row-cols-md-4 g-4">
+                <div class="col">
+                    <div class="card">
+                        <img src="assets/img/bottle.png" class="card-img-top w-25 align-self-center" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
                         </div>
-                    </div>
-                </div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">An item</li>
+                            <li class="list-group-item">A second item</li>
+                            <li class="list-group-item">A third item</li>
+                        </ul>
+                        <div class="card-body">
+                            <a href="#" class="card-link">Card link</a>
+                            <a href="#" class="card-link">Another link</a>
+                        </div>
+                    </div> <!--Fim do card-->
+                </div> <!--Fim da coluna-->
 
-                <div class="col-md-9">
-                    <div class="row row-cols-1 row-cols-md-3 g-3">
-                        <div class="col">
-                            <div class="card">
-                                <img src="assets/img/bottle.png" class="card-img-top w-25 align-self-center" alt="...">
-                                <div class="card-body">
-                                    <h5 class="card-title">Card title</h5>
-                                    <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                                </div>
-                                <ul class="list-group list-group-flush">
-                                    <li class="list-group-item">An item</li>
-                                    <li class="list-group-item">A second item</li>
-                                    <li class="list-group-item">A third item</li>
-                                </ul>
-                                <div class="card-body">
-                                    <a href="#" class="card-link">Card link</a>
-                                    <a href="#" class="card-link">Another link</a>
-                                </div>
-                            </div> <!--Fim do card 1-->
-                        </div> <!--Fim da coluna-->
+                <div class="col">
+                    <div class="card">
+                        <img src="assets/img/bottle.png" class="card-img-top w-25 align-self-center" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                        </div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">An item</li>
+                            <li class="list-group-item">A second item</li>
+                            <li class="list-group-item">A third item</li>
+                        </ul>
+                        <div class="card-body">
+                            <a href="#" class="card-link">Card link</a>
+                            <a href="#" class="card-link">Another link</a>
+                        </div>
+                    </div> <!--Fim do card-->
+                </div> <!--Fim da coluna-->
 
-                        <div class="col">
-                            <div class="card">
-                                <img src="assets/img/bottle.png" class="card-img-top w-25 align-self-center" alt="...">
-                                <div class="card-body">
-                                    <h5 class="card-title">Card title</h5>
-                                    <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                                </div>
-                                <ul class="list-group list-group-flush">
-                                    <li class="list-group-item">An item</li>
-                                    <li class="list-group-item">A second item</li>
-                                    <li class="list-group-item">A third item</li>
-                                </ul>
-                                <div class="card-body">
-                                    <a href="#" class="card-link">Card link</a>
-                                    <a href="#" class="card-link">Another link</a>
-                                </div>
-                            </div> <!--Fim do card 1-->
-                        </div> <!--Fim da coluna-->
+                <div class="col">
+                    <div class="card">
+                        <img src="assets/img/bottle.png" class="card-img-top w-25 align-self-center" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                        </div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">An item</li>
+                            <li class="list-group-item">A second item</li>
+                            <li class="list-group-item">A third item</li>
+                        </ul>
+                        <div class="card-body">
+                            <a href="#" class="card-link">Card link</a>
+                            <a href="#" class="card-link">Another link</a>
+                        </div>
+                    </div> <!--Fim do card-->
+                </div> <!--Fim da coluna-->
 
-                        <div class="col">
-                            <div class="card">
-                                <img src="assets/img/bottle.png" class="card-img-top w-25 align-self-center" alt="...">
-                                <div class="card-body">
-                                    <h5 class="card-title">Card title</h5>
-                                    <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                                </div>
-                                <ul class="list-group list-group-flush">
-                                    <li class="list-group-item">An item</li>
-                                    <li class="list-group-item">A second item</li>
-                                    <li class="list-group-item">A third item</li>
-                                </ul>
-                                <div class="card-body">
-                                    <a href="#" class="card-link">Card link</a>
-                                    <a href="#" class="card-link">Another link</a>
-                                </div>
-                            </div> <!--Fim do card 1-->
-                        </div> <!--Fim da coluna-->
-                    </div> 
-                
-                </div>
+                <div class="col">
+                    <div class="card">
+                        <img src="assets/img/bottle.png" class="card-img-top w-25 align-self-center" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                        </div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">An item</li>
+                            <li class="list-group-item">A second item</li>
+                            <li class="list-group-item">A third item</li>
+                        </ul>
+                        <div class="card-body">
+                            <a href="#" class="card-link">Card link</a>
+                            <a href="#" class="card-link">Another link</a>
+                        </div>
+                    </div> <!--Fim do card-->
+                </div> <!--Fim da coluna-->
 
-            </div> <!--Fim da row Lançamentos-->
-            
+            </div> <!--Fim da row dos cards-->
+
         </div>
     </section>
     
-    <section id="Promoções">
-        <div class="container mt-5" >
-            <div class="row pt-2 mt-3 mb-2">
-                <hr class="custom-hr">
+    <section id="promocoes">
+        <div class="container">
+            <div class="row mt-4 mb-2">
+                <h1><strong>Promoções</strong></h1>
             </div>
-            <div class="row d-flex">
-                <div class="col-md-3 align-items-center">
-                    <div class="col-md-12">
-                        <div >
-                            <h1 class="mt-3"><strong>Promoções</strong></h1>
-                            <img class="d-none d-md-block mt-4" src="assets/img/grey_beard.jpeg" width="100%"  alt="Anão com canecas de chopp">
+            <div class="row row-cols-1 row-cols-md-4 g-4">
+                <div class="col">
+                    <div class="card">
+                        <img src="assets/img/bottle.png" class="card-img-top w-25 align-self-center" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
                         </div>
-                    </div>
-                </div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">An item</li>
+                            <li class="list-group-item">A second item</li>
+                            <li class="list-group-item">A third item</li>
+                        </ul>
+                        <div class="card-body">
+                            <a href="#" class="card-link">Card link</a>
+                            <a href="#" class="card-link">Another link</a>
+                        </div>
+                    </div> <!--Fim do card-->
+                </div> <!--Fim da coluna-->
 
-                <div class="col-md-9">
-                    <div class="row row-cols-1 row-cols-md-3 g-3">
-                        <div class="col">
-                            <div class="card">
-                                <img src="assets/img/bottle.png" class="card-img-top w-25 align-self-center" alt="...">
-                                <div class="card-body">
-                                    <h5 class="card-title">Card title</h5>
-                                    <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                                </div>
-                                <ul class="list-group list-group-flush">
-                                    <li class="list-group-item">An item</li>
-                                    <li class="list-group-item">A second item</li>
-                                    <li class="list-group-item">A third item</li>
-                                </ul>
-                                <div class="card-body">
-                                    <a href="#" class="card-link">Card link</a>
-                                    <a href="#" class="card-link">Another link</a>
-                                </div>
-                            </div> <!--Fim do card 1-->
-                        </div> <!--Fim da coluna-->
+                <div class="col">
+                    <div class="card">
+                        <img src="assets/img/bottle.png" class="card-img-top w-25 align-self-center" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                        </div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">An item</li>
+                            <li class="list-group-item">A second item</li>
+                            <li class="list-group-item">A third item</li>
+                        </ul>
+                        <div class="card-body">
+                            <a href="#" class="card-link">Card link</a>
+                            <a href="#" class="card-link">Another link</a>
+                        </div>
+                    </div> <!--Fim do card-->
+                </div> <!--Fim da coluna-->
 
-                        <div class="col">
-                            <div class="card">
-                                <img src="assets/img/bottle.png" class="card-img-top w-25 align-self-center" alt="...">
-                                <div class="card-body">
-                                    <h5 class="card-title">Card title</h5>
-                                    <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                                </div>
-                                <ul class="list-group list-group-flush">
-                                    <li class="list-group-item">An item</li>
-                                    <li class="list-group-item">A second item</li>
-                                    <li class="list-group-item">A third item</li>
-                                </ul>
-                                <div class="card-body">
-                                    <a href="#" class="card-link">Card link</a>
-                                    <a href="#" class="card-link">Another link</a>
-                                </div>
-                            </div> <!--Fim do card 1-->
-                        </div> <!--Fim da coluna-->
+                <div class="col">
+                    <div class="card">
+                        <img src="assets/img/bottle.png" class="card-img-top w-25 align-self-center" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                        </div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">An item</li>
+                            <li class="list-group-item">A second item</li>
+                            <li class="list-group-item">A third item</li>
+                        </ul>
+                        <div class="card-body">
+                            <a href="#" class="card-link">Card link</a>
+                            <a href="#" class="card-link">Another link</a>
+                        </div>
+                    </div> <!--Fim do card-->
+                </div> <!--Fim da coluna-->
 
-                        <div class="col">
-                            <div class="card">
-                                <img src="assets/img/bottle.png" class="card-img-top w-25 align-self-center" alt="...">
-                                <div class="card-body">
-                                    <h5 class="card-title">Card title</h5>
-                                    <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                                </div>
-                                <ul class="list-group list-group-flush">
-                                    <li class="list-group-item">An item</li>
-                                    <li class="list-group-item">A second item</li>
-                                    <li class="list-group-item">A third item</li>
-                                </ul>
-                                <div class="card-body">
-                                    <a href="#" class="card-link">Card link</a>
-                                    <a href="#" class="card-link">Another link</a>
-                                </div>
-                            </div> <!--Fim do card 1-->
-                        </div> <!--Fim da coluna-->
-                    </div> 
-                
-                </div>
+                <div class="col">
+                    <div class="card">
+                        <img src="assets/img/bottle.png" class="card-img-top w-25 align-self-center" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                        </div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">An item</li>
+                            <li class="list-group-item">A second item</li>
+                            <li class="list-group-item">A third item</li>
+                        </ul>
+                        <div class="card-body">
+                            <a href="#" class="card-link">Card link</a>
+                            <a href="#" class="card-link">Another link</a>
+                        </div>
+                    </div> <!--Fim do card-->
+                </div> <!--Fim da coluna-->
 
-            </div> <!--Fim da row Lançamentos-->
-            
-        </div>
+            </div> <!--Fim da row dos cards-->
+              
+        </div> <!--fim do container-->
     </section>
 
     <section id="acessorios">
-        <div class="container mt-5" >
-            <div class="row pt-2 mt-3 mb-2">
-                <hr class="custom-hr">
+        <div class="container">
+            <div class="row mt-4 mb-2">
+                <h1><strong>Acessórios</strong></h1>
             </div>
-            <div class="row d-flex">
-                <div class="col-md-3 align-items-center">
-                    <div class="col-md-12">
-                        <div >
-                            <h1 class="mt-3"><strong>Acessórios</strong></h1>
-                            <img class="d-none d-md-block mt-4" src="assets/img/axe_shield.jpeg" width="100%"  alt="Anão com canecas de chopp">
+            <div class="row row-cols-1 row-cols-md-4 g-4">
+                <div class="col">
+                    <div class="card">
+                        <img src="assets/img/abridor_garrafa.jpeg" class="card-img-top w-50 align-self-center" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Abridor de Garrafas</h5>
+                            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
                         </div>
-                    </div>
-                </div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">An item</li>
+                            <li class="list-group-item">A second item</li>
+                            <li class="list-group-item">A third item</li>
+                        </ul>
+                        <div class="card-body">
+                            <a href="#" class="card-link">Card link</a>
+                            <a href="#" class="card-link">Another link</a>
+                        </div>
+                    </div> <!--Fim do card-->
+                </div> <!--Fim da coluna-->
 
-                <div class="col-md-9">
-                    <div class="row row-cols-1 row-cols-md-3 g-3">
-                        <div class="col">
-                            <div class="card">
-                                <img src="assets/img/bottle.png" class="card-img-top w-25 align-self-center" alt="...">
-                                <div class="card-body">
-                                    <h5 class="card-title">Card title</h5>
-                                    <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                                </div>
-                                <ul class="list-group list-group-flush">
-                                    <li class="list-group-item">An item</li>
-                                    <li class="list-group-item">A second item</li>
-                                    <li class="list-group-item">A third item</li>
-                                </ul>
-                                <div class="card-body">
-                                    <a href="#" class="card-link">Card link</a>
-                                    <a href="#" class="card-link">Another link</a>
-                                </div>
-                            </div> <!--Fim do card 1-->
-                        </div> <!--Fim da coluna-->
+                <div class="col">
+                    <div class="card">
+                        <img src="assets/img/abridor_garrafa.jpeg" class="card-img-top w-50 align-self-center" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Abridor de Garrafas</h5>
+                            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                        </div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">An item</li>
+                            <li class="list-group-item">A second item</li>
+                            <li class="list-group-item">A third item</li>
+                        </ul>
+                        <div class="card-body">
+                            <a href="#" class="card-link">Card link</a>
+                            <a href="#" class="card-link">Another link</a>
+                        </div>
+                    </div> <!--Fim do card-->
+                </div> <!--Fim da coluna-->
 
-                        <div class="col">
-                            <div class="card">
-                                <img src="assets/img/bottle.png" class="card-img-top w-25 align-self-center" alt="...">
-                                <div class="card-body">
-                                    <h5 class="card-title">Card title</h5>
-                                    <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                                </div>
-                                <ul class="list-group list-group-flush">
-                                    <li class="list-group-item">An item</li>
-                                    <li class="list-group-item">A second item</li>
-                                    <li class="list-group-item">A third item</li>
-                                </ul>
-                                <div class="card-body">
-                                    <a href="#" class="card-link">Card link</a>
-                                    <a href="#" class="card-link">Another link</a>
-                                </div>
-                            </div> <!--Fim do card 1-->
-                        </div> <!--Fim da coluna-->
+                <div class="col">
+                    <div class="card">
+                        <img src="assets/img/abridor_garrafa.jpeg" class="card-img-top w-50 align-self-center" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Abridor de Garrafas</h5>
+                            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                        </div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">An item</li>
+                            <li class="list-group-item">A second item</li>
+                            <li class="list-group-item">A third item</li>
+                        </ul>
+                        <div class="card-body">
+                            <a href="#" class="card-link">Card link</a>
+                            <a href="#" class="card-link">Another link</a>
+                        </div>
+                    </div> <!--Fim do card-->
+                </div> <!--Fim da coluna-->
 
-                        <div class="col">
-                            <div class="card">
-                                <img src="assets/img/bottle.png" class="card-img-top w-25 align-self-center" alt="...">
-                                <div class="card-body">
-                                    <h5 class="card-title">Card title</h5>
-                                    <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                                </div>
-                                <ul class="list-group list-group-flush">
-                                    <li class="list-group-item">An item</li>
-                                    <li class="list-group-item">A second item</li>
-                                    <li class="list-group-item">A third item</li>
-                                </ul>
-                                <div class="card-body">
-                                    <a href="#" class="card-link">Card link</a>
-                                    <a href="#" class="card-link">Another link</a>
-                                </div>
-                            </div> <!--Fim do card 1-->
-                        </div> <!--Fim da coluna-->
-                    </div> 
-                
-                </div>
+                <div class="col">
+                    <div class="card">
+                        <img src="assets/img/abridor_garrafa.jpeg" class="card-img-top w-50 align-self-center" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Abridor de Garrafas</h5>
+                            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                        </div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">An item</li>
+                            <li class="list-group-item">A second item</li>
+                            <li class="list-group-item">A third item</li>
+                        </ul>
+                        <div class="card-body">
+                            <a href="#" class="card-link">Card link</a>
+                            <a href="#" class="card-link">Another link</a>
+                        </div>
+                    </div> <!--Fim do card-->
+                </div> <!--Fim da coluna-->
 
-            </div> <!--Fim da row Lançamentos-->
-            
-        </div>
+            </div> <!--Fim da row dos cards-->
+              
+        </div> <!--fim do container-->
     </section>
 
     <footer id="rodape">

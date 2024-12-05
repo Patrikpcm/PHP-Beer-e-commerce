@@ -27,23 +27,13 @@ CREATE TABLE produtos(
     categoria VARCHAR(10) DEFAULT 'cerveja',
     estilo VARCHAR(50) DEFAULT NULL,
     preco DECIMAL(15,2),
+    desconto DECIMAL(15,2),
     foto VARCHAR(70)
 );
 
-/*
-Tabelas que contém os ids dos produtos que estão em promoção bem como
-o valor de desconto em cima do preço.
-*/
-CREATE TABLE promocoes(
-    id_produto INT UNSIGNED NOT NULL,
-    desconto DECIMAL(15,2),
-    CONSTRAINT id_produto_promo_fk
-    FOREIGN KEY (id_produto) REFERENCES produtos(id_produto)
-);
 
 /*
-Tabelas que contém os ids dos produtos que estão em promoção bem como
-o valor de desconto em cima do preço.
+Tabelas que contém os ids dos produtos que são lançamentos.
 */
 CREATE TABLE lancamentos(
     id_produto INT UNSIGNED NOT NULL,

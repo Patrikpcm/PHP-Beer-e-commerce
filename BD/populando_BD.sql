@@ -10,6 +10,7 @@ INSERT INTO produtos VALUES(
     'cerveja',
     'American Blonde Ale',
     12.99,
+    0,
     'assets/img/garrafa_AMERICAN_BLONDE_ALE.png'
 );
 
@@ -24,6 +25,7 @@ INSERT INTO produtos VALUES(
     'cerveja',
     'American IPA',
     15.50,
+    0,
     'assets/img/garrafa_AMERICAN_IPA.png'
 );
 
@@ -38,6 +40,7 @@ INSERT INTO produtos VALUES(
     'cerveja',
     'Belgian',
     55.90,
+    0,
     'assets/img/garrafa_BELGIAN_STRONG_GOLDEN_ALE.png'
 );
 
@@ -53,6 +56,7 @@ INSERT INTO produtos VALUES(
     'cerveja',
     'Double IPA',
     10.50,
+    0,
     'assets/img/garrafa_DOUBLE_IPA.png'
 );
 
@@ -68,6 +72,7 @@ INSERT INTO produtos VALUES(
     'cerveja',
     'Double IPA',
     11.50,
+    5.0,
     'assets/img/garrafa_DOUBLE_IPA_2.png'
 );
 
@@ -84,6 +89,7 @@ INSERT INTO produtos VALUES(
     'cerveja',
     'Imperial IPA',
     14.00,
+    10,
     'assets/img/garrafa_IMPERIAL_IPA.png'
 );
 
@@ -99,6 +105,7 @@ INSERT INTO produtos VALUES(
     'cerveja',
     'Imperial Stout',
     44.00,
+    0,
     'assets/img/garrafa_IMPERIAL_STOUT.png'
 );
 
@@ -115,6 +122,7 @@ INSERT INTO produtos VALUES(
     'cerveja',
     'Imperial Stout',
     53.00,
+    0,
     'assets/img/garrafa_IMPERIAL_STOUT_2.png'
 );
 
@@ -130,6 +138,7 @@ INSERT INTO produtos VALUES(
     'cerveja',
     'IPA',
     9.00,
+    3.0,
     'assets/img/garrafa_IPA.png'
 );
 
@@ -145,6 +154,7 @@ INSERT INTO produtos VALUES(
     'cerveja',
     'IPA',
     9.50,
+    0,
     'assets/img/garrafa_IPA_2.png'
 );
 
@@ -160,6 +170,7 @@ INSERT INTO produtos VALUES(
     'cerveja',
     'IPA',
     10.00,
+    0,
     'assets/img/garrafa_IPA_3.png'
 );
 
@@ -175,6 +186,7 @@ INSERT INTO produtos VALUES(
     'cerveja',
     'IPA',
     10.50,
+    5,
     'assets/img/garrafa_IPA_4.png'
 );
 
@@ -189,6 +201,7 @@ INSERT INTO produtos VALUES(
     'cerveja',
     'Pilsen',
     8.90,
+    10.0,
     'assets/img/garrafa_PILSEN.png'
 );
 
@@ -204,6 +217,7 @@ INSERT INTO produtos VALUES(
     'cerveja',
     'Pilsen',
     10.90,
+    0,
     'assets/img/garrafa_PILSEN_2.png'
 );
 
@@ -219,6 +233,7 @@ INSERT INTO produtos VALUES(
     'cerveja',
     'Pilsen',
     12.90,
+    0,
     'assets/img/garrafa_PILSEN_3.png'
 );
 
@@ -233,6 +248,7 @@ INSERT INTO produtos VALUES(
     'cerveja',
     'Session IPA',
     62.99,
+    0,
     'assets/img/garrafa_SESSION_IPA.png'
 );
 
@@ -247,6 +263,7 @@ INSERT INTO produtos VALUES(
     'cerveja',
     'Session IPA',
     62.99,
+    0,
     'assets/img/garrafa_SESSION.png'
 );
 
@@ -261,6 +278,7 @@ INSERT INTO produtos VALUES(
     'cerveja',
     'Weiss',
     82.00,
+    7.0,
     'assets/img/garrafa_WEISS.png'
 );
 
@@ -275,6 +293,7 @@ INSERT INTO produtos VALUES(
     'cerveja',
     'Weiss',
     82.00,
+    0,
     'assets/img/garrafa_WEISS_2.png'
 );
 
@@ -289,6 +308,7 @@ INSERT INTO produtos VALUES(
     'cerveja',
     'Weiss',
     82.00,
+    0,
     'assets/img/garrafa_WEISS_3.png'
 );
 
@@ -305,6 +325,7 @@ INSERT INTO produtos VALUES(
     'cerveja',
     'Weizer Bier',
     150.00,
+    0,
     'assets/img/garrafa_WEIZER_BIER.png'
 );
 
@@ -319,6 +340,7 @@ INSERT INTO produtos VALUES(
     'acessório',
     NULL,
     30.00,
+    0,
     'assets/img/TACA_DWARF.png'
 );
 
@@ -332,6 +354,7 @@ INSERT INTO produtos VALUES(
     'acessório',
     NULL,
     100.00,
+    0,
     'assets/img/COOLER_MADEIRA.png'
 );
 
@@ -345,6 +368,7 @@ INSERT INTO produtos VALUES(
     'acessório',
     NULL,
     300.00,
+    0,
     'assets/img/CHOPEIRA_MADEIRA.png'
 );
 
@@ -359,6 +383,7 @@ INSERT INTO produtos VALUES(
     'acessório',
     NULL,
     800.00,
+    0,
     'assets/img/CHOPEIRA_OURO_PRATA.png'
 );
 
@@ -372,6 +397,7 @@ INSERT INTO produtos VALUES(
     'acessório',
     NULL,
     80.00,
+    0,
     'assets/img/CANECA_GOEEGO.png'
 );
 
@@ -386,6 +412,7 @@ INSERT INTO produtos VALUES(
     'acessório',
     NULL,
     120.00,
+    0,
     'assets/img/BOLACHA_MADEIRA_COM_TAMPA.png'
 );
 
@@ -401,6 +428,7 @@ INSERT INTO produtos VALUES(
     'acessório',
     NULL,
     240.00,
+    0,
     'assets/img/BARRIL_MADEIRA.png'
 );
 
@@ -414,6 +442,7 @@ INSERT INTO produtos VALUES(
     'acessório',
     NULL,
     200.00,
+    0,
     'assets/img/ABRIDOR_GARRAFAS_PRATA.png'
 );
 
@@ -427,6 +456,7 @@ INSERT INTO produtos VALUES(
     'acessório',
     NULL,
     40.00,
+    0,
     'assets/img/ABRIDOR_GARRAFAS_DWARFES.png'
 );
 
@@ -439,6 +469,7 @@ INSERT INTO produtos VALUES(
     'acessório',
     NULL,
     92.00,
+    0,
     'assets/img/cabo_com_abridor.jpeg'
 );
 
@@ -530,25 +561,4 @@ INSERT INTO lancamentos VALUES(
 
 INSERT INTO lancamentos VALUES(
     17
-);
-
--- populando promocoes
-INSERT INTO promocoes VALUES(
-    9,
-    5.0
-);
-
-INSERT INTO promocoes VALUES(
-    9,
-    5.0
-);
-
-INSERT INTO promocoes VALUES(
-    1,
-    7.0
-);
-
-INSERT INTO promocoes VALUES(
-    2,
-    10.0
 );

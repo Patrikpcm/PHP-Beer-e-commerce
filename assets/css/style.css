@@ -86,7 +86,13 @@ h1,h2,h3,h4,h5 > strong{
     font-weight: 550;
     font-style: normal;
     color: black;
-    border-bottom: 3px solid black;
+  /* border-bottom: 3px solid black;*/
+}
+
+.custom-hr{
+   height: 5px ;
+   background: black;
+   margin-bottom: 30px;
 }
 
 .home-content{
