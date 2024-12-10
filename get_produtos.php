@@ -65,7 +65,7 @@
             
             echo ('<div class="row" style="height: 50%;">');
             echo (  '<div class="d-flex align-items-center justify-content-center">');
-            echo (      '<img src="assets/img/sad_dwarf.png" height="70%" alt="Anão triste">');
+            echo (      '<img src="assets/img/sad_dwarf.png" height="70%" alt="Anão chateado">');
             echo (  '</div>');
             echo (  '<div class="row">');
             echo (      '<h4 class="d-flex justify-content-center align-items-center texto-desculpa">');
@@ -78,12 +78,12 @@
             
         }
         else{
-            echo ('<div class="row row-cols-1 row-cols-md-3 g-3" id="lista_produtos">');
+            echo ('<div class="row row-cols-1 row-cols-md-3 g-3">');
             while($registro = mysqli_fetch_array($resultado_id, MYSQLI_ASSOC)){ //navegando por todos os resultados
                 if($registro['desconto'] == 0){
                     echo (  '<div class="col">');
                     echo (      '<div class="card">');
-                    echo (          '<img src="'.$registro['foto'].'"width="auto" height="180" class="align-self-center mt-2" alt="'.$registro['titulo'].'">');
+                    echo (         '<a href="descricao_produto.php?'.$registro['id_produto'].'" class="align-self-center mt-2"><img src="'.$registro['foto'].'"width="auto" height="180" alt="'.$registro['titulo'].'"></a>');
                     echo (          '<div class="card-body">');
                     echo (              '<h5 class="card-title">'.$registro['titulo'].'</h5>');
                     echo (              '<p exibir-texto class="card-text text-hide">'.$registro['descricao'].'</p>');
@@ -103,7 +103,7 @@
                 else{ //se o produto tiver desconto, imprime com a tag na foto
                     echo(' <div class="col">');
                     echo('    <div class="card">');
-                    echo('        <img src="'.$registro['foto'].'" "width="auto" height="180" class="align-self-center mt-2 container-imagem-promo" alt="'.$registro['titulo'].'">');
+                    echo('        <a href="descricao_produto.php?'.$registro['id_produto'].'" class="align-self-center mt-2"><img src="'.$registro['foto'].'" "width="auto" height="180" class="container-imagem-promo" alt="'.$registro['titulo'].'"></a>');
                     echo('          <div class="texto-promo"> PROMOCAO </div>');
                     echo('          <div class="card-body">');
                     echo('              <h5 class="card-title">'.$registro['titulo'].'</h5>');

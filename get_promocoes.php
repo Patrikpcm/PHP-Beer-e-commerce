@@ -13,7 +13,7 @@
         while( $registro = mysqli_fetch_array($resultado_id, MYSQLI_ASSOC) AND $cont<3){ //navegando pelos 3 primeiros resultados
             echo(' <div class="col">');
             echo('    <div class="card">');
-            echo('        <img src="'.$registro['foto'].'" "width="auto" height="180" class="align-self-center mt-2 container-imagem-promo" alt="'.$registro['titulo'].'">');
+            echo('        <img href="descricao_produto.php?'.$registro['id_produto'].' src="'.$registro['foto'].'" "width="auto" height="180" class="align-self-center mt-2 container-imagem-promo" alt="'.$registro['titulo'].'">');
             echo('          <div class="texto-promo"> PROMOCAO </div>');
             echo('          <div class="card-body">');
             echo('              <h5 class="card-title">'.$registro['titulo'].'</h5>');

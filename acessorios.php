@@ -1,11 +1,3 @@
-<?php
-    session_start(); //iniciando as variáveis de sessão para podermos ter acesso
-
-    !isset($_SESSION['email']) ? $logado = 0 : $logado=1; //Define qual dropdown será exibido para o usuário
-    
-    //area para recuperar o erro de falha de login
-?>
-
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -43,10 +35,17 @@
                             Cervejas por estilo
                             </a>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#">Action</a></li>
-                                <li><a class="dropdown-item" href="#">Another action</a></li>
-                                <li><hr class="dropdown-divider"></li>
-                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                <li><a class="dropdown-item" href="produtos.php?tipo=IPA">IPA</a></li>
+                                <li><a class="dropdown-item" href="produtos.php?tipo=Imperial IPA">Imperial IPA</a></li>
+                                <li><a class="dropdown-item" href="produtos.php?tipo=American Blonde Ale">American Blonde Ale</a></li>
+                                <li><a class="dropdown-item" href="produtos.php?tipo=American IPA">American IPA</a></li>
+                                <li><a class="dropdown-item" href="produtos.php?tipo=Belgian">Belgian</a></li>
+                                <li><a class="dropdown-item" href="produtos.php?tipo=Imperial Stout">Imperial Stout</a></li>
+                                <li><a class="dropdown-item" href="produtos.php?tipo=Session IPA">Session IPA</a></li>
+                                <li><a class="dropdown-item" href="produtos.php?tipo=Weizer Bier">Weizer Bier</a></li>
+                                <li><a class="dropdown-item" href="produtos.php?tipo=Pilsen">Pilsen</a></li>
+                                <li><a class="dropdown-item" href="produtos.php?tipo=Double IPA">Double IPA</a></li>
+                                <li><a class="dropdown-item" href="produtos.php?tipo=Weiss">Weiss</a></li>
                             </ul>
                         </li>
                     </ul>
@@ -56,10 +55,10 @@
                     </form>
                     <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link" href="#"> Minha conta </a>
+                            <a class="nav-link" href="#"> <i class="fa-solid fa-right-to-bracket fa-xs me-1"></i> Conta </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#"> Geladeira </a>
+                            <a class="nav-link ms-2" href="#"><i class="fa-solid fa-cart-shopping fa-xs me-1"></i> Geladeira </a>
                         </li>
                     </ul>
                 </div>
@@ -67,77 +66,81 @@
         </nav>
     </header>
 
-    <section id="descricao">
-        <div class="container mt-5" >
-            <div class="row" id="descricao_produto">
-                
-                <!--AQUI SERA INCLUÍDA FOTO E DESCRIÇÂO COMPLETA DO PRODUTO-->
+    <section id="home">
+        <div class="home-wrap">
 
-            </div> <!--Fim da row 1-->
-
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="d-flex justify-content-center" id="avaliacao_estrelas">
-                        
-                    <!--<i class="fa-solid fa-star estrela"></i>
-                        <i class="fa-solid fa-star-half-stroke estrela"></i>
-                        <i class="fa-regular fa-star estrela"></i>
-                        <i class="fa-regular fa-star estrela"></i>
-                        <i class="fa-regular fa-star estrela"></i> -->
-                        
+            <img class="home-bg" src="assets/img/dwarf_portrait.jpg"alt="">
+        
+            <div class="home-content">
+                <div class="container">
+                    <div class="row d-flex align-items-center" style="margin-top: 1%;">
+                        <div class="col-md-12 mt-5 mb-5">
+                            <div class="d-flex justify-content-center">
+                                <h1> <strong class="home-text ">Barûk Alkh - O Pub de Khazad-Dhûm</strong></h1>             
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </div> <!--Fim da row 2-->
+                    <div class="row d-flex align-items-center" style="margin-bottom: 1%;">
+                        <div class="col-md-12">
+                            <div class="d-flex justify-content-center mb-5 mt-3">
+                                <h3 class="texto-acessorios">Aqui você encontra os melhores acessórios para desgustar suas cervejas como todo o estilo que um anão merece!</h3>
+                            </div>
+                        </div>
+                    </div>
 
-            <hr class="custom-hr mt-4">
-
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="d-flex justify-content-center">
-                        <h2 style="border-bottom: 3px solid rgb(207, 187, 0);">Avaliações</h2>
-                    </div>                   
-                </div>
-
-                <div class="box-avaliacoes" id="box_comentarios">
-                    <!-- AQUI SÃO INSERIDAS OS COMENTARIOS-->
-                </div>
-                
-            </div> <!--Fim da row 2-->
-
-            <hr class="custom-hr mt-4">
-
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="d-flex justify-content-center">
-                        <h2 style="border-bottom: 3px solid rgb(207, 187, 0)">Faça sua avaliação</h2>
-                    </div>                   
                 </div>
             </div>
+        </div>
 
-            <div class="row">
-            
-                <form id="form-comentario" class="col-md-12 mt-4 d-flex">
-                    <div class="col-md-8">
-                        <label for="texto-comentario"><h5>Comentário</h5></label>
-                        <input class="area-comentario" type="text" id="texto-comentario" name="texto-comentario" placeholder="Deixe um comentário" maxlength="200">   
+    </section>
+
+    <section id="informacoes">
+        <div class="container">
+            <div class="row mt-5 mb-3">
+                <div class="col-md-12 d-flex justify-content-around">
+                    <div class="">
+                        <img src="assets/img/deliver.svg" class="me-1" height="35px" alt="">
+                        Entrega para toda Khazad-Dûm
                     </div>
-                    <div class="col-md-2 rating">
-                        <input type="radio" name="star" id="star1" value="1"><label for="star1"></label>
-                        <input type="radio" name="star" id="star2" value="2"><label for="star2"></label>
-                        <input type="radio" name="star" id="star3" value="3"><label for="star3"></label>
-                        <input type="radio" name="star" id="star4" value="4"><label for="star4"></label>
-                        <input type="radio" name="star" id="star5" value="5"><label for="star5"></label>
+                    <div class="">
+                        <i class="me-2 fa-solid fa-money-check-dollar fa-2x"></i>
+                        Frete grátis <br><span style="font-size: smaller;">*Confira as regras</span>
                     </div>
-                    <div class="col-md-2">
-                        <button type="button" id="btn-comentario" class="btn btn-comentario" <?=$logado == 0 ? disabled : enabled ?>>Enviar</button>
-                        <?=$logado == 0 ? '<p style="color:#FF0000">Você precisa estar logado para deixar uma avaliação</p>' : '' ?> 
+                    <div class="">
+                        <i class="me-2 fa-solid fa-credit-card fa-2x"></i>
+                        Parcelamento em até 3x na Promissória dos Anões
                     </div>
-                </form>
-                        
-                <div id="cavalo"> 
-                       
                 </div>
+            </div>
+        </div>
+        <div class="container mt-4" >
+            <div class="row">
+                <div class="col-md-12">
+                    <hr class="custom-hr">
+                </div>
+            </div>
+        </div>
+    </section>
+    <p id="exibir" exibir-texto class=" ">PARAGRAFO TESTE</p>
+    <section id="voltar">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 d-flex justify-content-end">
+                    <a href="index.php" class="nav-link mt-3"><i class="fa-solid fa-arrow-left fa-xl me-2"></i>Voltar</a>
+                </div>
+            </div>
+        </div>
+    </section>
 
+    <section id="descricao_produto">
+
+        <div class="container mt-4" >
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="row row-cols-1 row-cols-md-3 g-3" id="all-acessorios">
+                        <!-- AQUI SERÃO MOSTRADOS OS ACESSÓRIOS-->
+                    </div>
+                </div>
             </div> <!--Fim da row-->
         </div><!--Fim do container-->
     </section>
@@ -214,6 +217,8 @@
         </div> <!--Fim do container-->
     </footer>
 
+    <!--Google icons-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=login" />
 
      <!--Font Awesome-->
      <script src="https://kit.fontawesome.com/96d124ffc8.js" crossorigin="anonymous"></script>
@@ -221,7 +226,7 @@
      <!--Javascript-->
      <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-     <script type="text/Javascript" src="assets/js/descricao_produto.js"></script>
+     <script type="text/Javascript" src="assets/js/acessorios.js"></script>
     
      <!--Estilo CSS-->
      <link rel="stylesheet" href="assets/css/style.css" type="text/css">

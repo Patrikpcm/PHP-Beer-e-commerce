@@ -163,10 +163,22 @@ h1,h2,h3,h4,h5 > strong{
     font-size: 25px;
 }
 
+.texto-promo-descricao{
+    position: absolute;
+    top: 23%;
+    left: 24.5%;
+    transform: translate(-50%, -50%);
+    transform: rotate(-45deg);
+    background-color: red;
+    color: white;
+    font-size: 40px;
+}
+
 .card-preco{
     font-size: 1.8em;
     color: brown;
     border-bottom: 1px solid gold;
+    text-decoration: none!important;
 }
 
 .card-preco-promo{
@@ -221,4 +233,129 @@ h1,h2,h3,h4,h5 > strong{
     color: red;
     padding: 0 5em 0px 5em;
     border-bottom: 0;
+}
+
+.texto-acessorios{
+    text-align: center;
+    color: black;
+    text-shadow: gold 0em 0em 0.1em;
+    padding: 0 5em 0px 5em;
+    border-bottom: 5em;
+    /*rgb(207, 4, 4)*/
+}
+
+/*  PAGINA DE DESCRIÇÃO DO PRODUTO  */
+.box-produto{
+    border: 1px solid gold;
+    box-shadow:  rgb(250, 252, 179) 0em 0em 0.5em;
+    border-radius: 25px;
+    background: radial-gradient(rgb(240, 219, 103), rgba(151, 132, 81, 0.76));
+}
+
+.preco-descricao{
+    color: brown;
+    font-weight: 600;
+}
+
+.btn-add{
+    background: black;
+    color: gold;
+    border-color: gold;
+    font-size: 1.5em;
+}
+
+.btn-add:hover{
+    background: black;
+    color: gold;
+    text-shadow: rgb(243, 242, 239) 0em 0em 0.5em;
+    border-color: gold;
+    box-shadow: rgb(243, 242, 239) 0em 0em 0.5em;
+}
+
+.box-avaliacoes{
+    height: 150px;
+    max-height: 100%;
+    overflow: scroll;
+    overflow-x: hidden;
+}
+
+.avaliacao{
+    border: 2px solid;
+    margin-top: 3px;
+    border-radius: 5px;
+    background: rgba(128, 128, 128, 0.199);
+    border-color: gold;
+    box-shadow: rgb(243, 242, 239) 0em 0em 0.5em;
+    padding: 10px 10px 0px 10px;
+}
+
+.usuario-texto{
+    color: brown;
+}
+
+.rating{
+    top: 50%;
+    left: 50%;
+    transform: translate(0%, -18%) rotateY(180deg);
+    display: flex;
+  }
+  
+  .rating input{
+    display: none;
+  }
+  
+  .rating label{
+      display: block;
+      cursor: pointer;
+      width: 39px;
+  }
+  
+  .rating label:before{
+    content: '\f005';
+    font-family: fontAwesome;
+    position: relative;
+    display: block;
+    font-size: 28px;
+    color: black;
+  }
+  
+  .rating label:after{
+    content: '\f005';
+    font-family: fontAwesome;
+    position: absolute;
+    display: block;
+    font-size: 28px;
+    color: rgb(189, 161, 6);
+    top: 0;
+    opacity: 0;
+    transition: .5;
+    text-shadow: 0 4px 5px rgba(0, 0, 0, .5);
+  }
+  .rating label:hover:after,
+  .rating label:hover ~ label:after,
+  .rating input:checked ~ label:after{
+    opacity: 1;
+  }
+
+.area-comentario{
+    width: 85%;
+}
+
+.btn-comentario{
+    margin-left: 30%;
+    background: black;
+    color: gold;
+    border-color: gold;
+}
+.btn-comentario:hover{
+    background: black;
+    color: gold;
+    text-shadow: rgb(243, 242, 239) 0em 0em 0.5em;
+    border-color: gold;
+    box-shadow: rgb(243, 242, 239) 0em 0em 0.5em;
+} 
+  
+.estrela{
+    font-size: 40px;
+    color: rgb(121, 103, 0);
 }
