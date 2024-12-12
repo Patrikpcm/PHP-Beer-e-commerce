@@ -95,7 +95,7 @@
                     echo (              '<li class="list-group-item"><strong class="card-preco">R$'.$registro['preco'].'</strong></li>');
                     echo (          '</ul>');
                     echo (          '<div class="card-body align-self-center">');
-                    echo (              '<a href="#" type="button" class="btn btn-search">Adicionar ao carrinho</a>');
+                    echo (              '<a href="#" type="button" class="btn btn-search">Adicionar à geladeira</a>');
                     echo (          '</div>');
                     echo (      '</div>');
                     echo (  '</div>');
@@ -120,7 +120,7 @@
                     echo('              <li class="list-group-item"><strong class="card-preco-promo">R$'.$registro['preco'].'</strong> <strong class="card-preco">R$'.$precoFinal.'</strong></li>');
                     echo('          </ul>');
                     echo('          <div class="card-body align-self-center">');
-                    echo('              <a href="#" type="button" class="btn btn-search">Adicionar ao carrinho</a>');
+                    echo('              <a href="#" type="button" class="btn btn-search">Adicionar à geladeira</a>');
                     echo('          </div>');
                     echo('      </div>');
                     echo('  </div>');
