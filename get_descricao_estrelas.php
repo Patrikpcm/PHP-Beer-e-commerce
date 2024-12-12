@@ -23,8 +23,9 @@
         }
         else{
             while($registro = mysqli_fetch_array($resultado_id, MYSQLI_ASSOC)){
-                $estrelas_inteiras = $registro['media'] / 1;
-                ($registro['media'] % 1) >= 0.5 ? $estrelas_metade = 1 : $estrelas_metade = 0;
+                $estrelas_inteiras = intval($registro['media']);          
+                
+                ($registro['media'] - $estrelas_inteiras) >= 0.5 ? $estrelas_metade = 1 : $estrelas_metade = 0;
                 
                 for($i = 1; $i <= $estrelas_inteiras; $i++){
                     echo ('<i class="fa-solid fa-star estrela"></i>');

@@ -16,7 +16,7 @@ $(window).on('load', function(){ //load para quando a pagina esta carregada
                 $('#descricao_produto').html(data);
             }
         });
-        
+
         $.ajax({ 
             url: 'get_descricao_estrelas.php',    
             method: 'POST',
@@ -26,7 +26,8 @@ $(window).on('load', function(){ //load para quando a pagina esta carregada
             success: function(data){
                 $('#avaliacao_estrelas').html(data);
             }
-        });  
+        });
+        
         $.ajax({ 
             url: 'get_descricao_comentarios.php',    
             method: 'POST',
@@ -36,15 +37,15 @@ $(window).on('load', function(){ //load para quando a pagina esta carregada
             success: function(data){
                 $('#box_comentarios').html(data);
             }
-        });  
+        });           
     }            
 });
 
-
 $(document).ready(function(){
+
     $('#btn-comentario').click(function(){
-        console.log(JSON.stringify($('#form-comentario').serializeArray()));
-        console.log(location.search.slice(1).split('&'));
+        //console.log(JSON.stringify($('#form-comentario').serializeArray()));
+        //console.log(location.search.slice(1));
         //data: {data : dados},)
         if($('#texto-comentario').val().length > 0){
             $.ajax({ 
@@ -56,7 +57,7 @@ $(document).ready(function(){
                 success: function(data){
                     $('#texto-comentario').val(''); //removendo o conteúdo do campo após a publicação da avaliação
                     alert('Avaliação inclusa com sucesso, agradecemos sua colaboração!');
-                    //$('#cavalo').html(data);
+                    window.location.href = ("descricao_produto.php?"+location.search.slice(1).split('&'));
                 }
             });     
         }

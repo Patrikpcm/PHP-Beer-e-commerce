@@ -22,11 +22,12 @@
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-lg nav-bg"><!--data-bs-theme="dark"-->
-            <div class="container">
-                <a class="navbar-brand me-5" href="#">BARÛK ALKH</a>
+        <nav class="navbar navbar-expand-lg nav-bg navbar-dark"><!--data-bs-theme="dark"-->
+            <div class="container-fluid">
+                <a class="navbar-brand me-5" href="index.php">BARÛK ALKH</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
+                    <span class="navbar-toggler-icon">
+                    </span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
@@ -37,7 +38,7 @@
                             <a class="nav-link" href="#promocoes">Promoções</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#acessorios">Acessórios</a>
+                            <a class="nav-link" href="acessorios.php">Acessórios</a>
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -118,7 +119,6 @@
                                         </div>
                                     </ul>';
                                 }
-                                
                             ?>
                         </li>
                         

@@ -12,21 +12,10 @@
 
     $data = json_decode(stripslashes($_POST['data']));
     $id_produto = $_POST['id_produto'];
-    var_dump($data);
-    var_dump($id_produto);
-    //echo $data[0]->name;
-    //echo $data[0]->value;
+    $id_usuario = $_SESSION['id_usuario'];
+    $texto = (string)$data[0]->value;
+    $nota = (int)$data[1]->value;
 
-    if(!$data){
-        //não há filtro aplicado, mostra todas as cervejas
-        //$sql = "INSERT INTO tweet(id_usuario, tweet) VALUES ($id_usuario, '$texto_tweet')";
-        $sql = "SELECT * FROM produtos WHERE categoria = 'cerveja'"; 
-    }
-    else{
-        echo "TEM DADOS";
-    }
-
-    $resultado_id = mysqli_query($link, $sql);
-    header('Location: descricao_produto.php?9');
+    $sql = "INSERT INTO avaliacoes_produtos VALUES(NULL, $id_produto, $id_usuario, '$texto', $nota)";
     
 ?>

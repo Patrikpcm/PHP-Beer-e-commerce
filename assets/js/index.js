@@ -23,3 +23,8 @@ $(window).on('load', function(){ //load para quando a pagina esta carregada
     });
              
 });
+
+$('[exibir-texto]').on('click', function(){
+    $(this).removeClass("text-hide");
+    //$(this).toggleClass("text-hide");
+});

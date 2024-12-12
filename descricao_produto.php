@@ -3,7 +3,9 @@
 
     !isset($_SESSION['email']) ? $logado = 0 : $logado=1; //Define qual dropdown será exibido para o usuário
     
-    //area para recuperar o erro de falha de login
+     //area para recuperar o erro de falha de login
+	$erro = isset($_GET['erro']) ? $_GET['erro'] : 0;
+	$registrado = isset($_GET['registrado']) ? $_GET['registrado'] : 0;
 ?>
 
 <!DOCTYPE html>
@@ -21,8 +23,8 @@
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-lg nav-bg"><!--data-bs-theme="dark"-->
-            <div class="container">
+        <nav class="navbar navbar-expand-lg nav-bg navbar-dark"><!--data-bs-theme="dark"-->
+            <div class="container-fluid">
                 <a class="navbar-brand me-5" href="index.php">BARÛK ALKH</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -30,23 +32,48 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Lançamentos</a>
+                            <a class="nav-link" href="index.php#lancamentos">Lançamentos</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Promoções</a>
+                            <a class="nav-link" href="index.php#promocoes">Promoções</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Acessórios</a>
+                            <a class="nav-link" href="acessorios.php">Acessórios</a>
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             Cervejas por estilo
                             </a>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#">Action</a></li>
-                                <li><a class="dropdown-item" href="#">Another action</a></li>
-                                <li><hr class="dropdown-divider"></li>
-                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                <li><a class="dropdown-item" href="produtos.php?IPA">IPA</a></li>
+                                <li><a class="dropdown-item" href="produtos.php?Imperial IPA">Imperial IPA</a></li>
+                                <li><a class="dropdown-item" href="produtos.php?American Blonde Ale">American Blonde Ale</a></li>
+                                <li><a class="dropdown-item" href="produtos.php?American IPA">American IPA</a></li>
+                                <li><a class="dropdown-item" href="produtos.php?Belgian">Belgian</a></li>
+                                <li><a class="dropdown-item" href="produtos.php?Imperial Stout">Imperial Stout</a></li>
+                                <li><a class="dropdown-item" href="produtos.php?Session IPA">Session IPA</a></li>
+                                <li><a class="dropdown-item" href="produtos.php?Weizer Bier">Weizer Bier</a></li>
+                                <li><a class="dropdown-item" href="produtos.php?Pilsen">Pilsen</a></li>
+                                <li><a class="dropdown-item" href="produtos.php?Double IPA">Double IPA</a></li>
+                                <li><a class="dropdown-item" href="produtos.php?Weiss">Weiss</a></li>
+                                
+                                <!--filtros
+                                    por estilo:
+                                        session
+                                        ipa
+                                        imperial ipa
+                                        american india pale ale
+                                        belgian strong golden ale
+                                        american blonde ale
+                                        imperial stout
+                                        session ipa
+                                        weizen bier
+                                        pilsen
+                                        double ipa
+                                        weiss -->
+
+
+
                             </ul>
                         </li>
                     </ul>
@@ -55,11 +82,48 @@
                         <button class="btn btn-search" type="submit">Escavar</button>
                     </form>
                     <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                        <li class="nav-item">
-                            <a class="nav-link" href="#"> Minha conta </a>
+                
+                       <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false"> <i class="fa-solid fa-right-to-bracket fa-xs me-1"></i> Conta </a>
+                            <?php
+                                if($logado == 1){
+                                    echo '  <ul class="dropdown-menu"> 
+                                                <li><a class="dropdown-item" href="minha_conta.html">Minha Conta</a></li>
+                                                <li><a class="dropdown-item" href="produtos.html">Meus pedidos</a></li>
+                                                <form action="logout.php" method="POST">
+                                                    <button type="submit" class="btn btn-search mt-2 ms-3">Sair</button>                                        
+                                                </form>
+                                            </ul>';
+                                }
+                                else{
+                                    echo '<ul class="dropdown-menu '; if($erro==1 || $registrado==1){echo 'show';} echo'">
+                                        <div class="col-md-12">
+                                            <form id="form_login" action="login.php" method="POST">
+                                                <div class="form-group">
+                                                    <input type="text" class="form-control" id="campo_email" name="email" placeholder="Email" />
+                                                </div>
+                                                <div class="form-group">
+                                                    <input type="password" class="form-control red" id="campo_senha" name="senha" placeholder="Senha" />
+                                                </div>
+                                                <button type="buttom" class="btn btn-search mt-2 ms-1" id="btn_login">Entrar</button>
+                                                <a href="cadastrese.php" role="buttom" class="btn btn-light mt-2 ms-1">Cadastrar</a>';
+                                                
+                                                if($erro == 1){
+                                                    echo '<p class="ms-1 mt-3" style="color:#FF0000">Usuário ou senha inválidos</p> ';
+                                                }
+                                                if($registrado == 1){
+                                                    echo '<p class="ms-2 mt-3" style="color:#0000CD">Bem vindo! Efetue login com suas credenciais.</font> ';
+                                                }
+                                             echo '   
+                                            </form>
+                                        </div>
+                                    </ul>';
+                                }
+                            ?>
                         </li>
+                        
                         <li class="nav-item">
-                            <a class="nav-link" href="#"> Geladeira </a>
+                            <a class="nav-link ms-2" href="#"><i class="fa-solid fa-cart-shopping fa-xs me-1"></i> Geladeira </a>
                         </li>
                     </ul>
                 </div>
@@ -78,16 +142,16 @@
             <div class="row">
                 <div class="col-md-6">
                     <div class="d-flex justify-content-center" id="avaliacao_estrelas">
-                        
-                    <!--<i class="fa-solid fa-star estrela"></i>
+                    <!--
+                    <i class="fa-solid fa-star estrela"></i>
                         <i class="fa-solid fa-star-half-stroke estrela"></i>
                         <i class="fa-regular fa-star estrela"></i>
                         <i class="fa-regular fa-star estrela"></i>
-                        <i class="fa-regular fa-star estrela"></i> -->
-                        
+                        <i class="fa-regular fa-star estrela"></i> 
+                                                                -->
                     </div>
                 </div>
-            </div> <!--Fim da row 2-->
+            </div><!-- Fim da row 2-->
 
             <hr class="custom-hr mt-4">
 
@@ -122,22 +186,17 @@
                         <input class="area-comentario" type="text" id="texto-comentario" name="texto-comentario" placeholder="Deixe um comentário" maxlength="200">   
                     </div>
                     <div class="col-md-2 rating">
-                        <input type="radio" name="star" id="star1" value="1"><label for="star1"></label>
-                        <input type="radio" name="star" id="star2" value="2"><label for="star2"></label>
+                        <input type="radio" name="star" id="star1" value="5"><label for="star1"></label>
+                        <input type="radio" name="star" id="star2" value="4"><label for="star2"></label>
                         <input type="radio" name="star" id="star3" value="3"><label for="star3"></label>
-                        <input type="radio" name="star" id="star4" value="4"><label for="star4"></label>
-                        <input type="radio" name="star" id="star5" value="5"><label for="star5"></label>
+                        <input type="radio" name="star" id="star4" value="2"><label for="star4"></label>
+                        <input type="radio" name="star" id="star5" value="1"><label for="star5"></label>
                     </div>
                     <div class="col-md-2">
                         <button type="button" id="btn-comentario" class="btn btn-comentario" <?=$logado == 0 ? disabled : enabled ?>>Enviar</button>
                         <?=$logado == 0 ? '<p style="color:#FF0000">Você precisa estar logado para deixar uma avaliação</p>' : '' ?> 
                     </div>
                 </form>
-                        
-                <div id="cavalo"> 
-                       
-                </div>
-
             </div> <!--Fim da row-->
         </div><!--Fim do container-->
     </section>
