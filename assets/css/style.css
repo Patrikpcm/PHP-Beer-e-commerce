@@ -360,3 +360,49 @@ h1,h2,h3,h4,h5 > strong{
     font-size: 40px;
     color: rgb(121, 103, 0);
 }
+
+
+/*  CARRINHO DE COMPRAS     */
+
+.titulo-carrinho{
+    margin-top: 1em;
+    background: black;
+    color: gold;
+    border: 1px solid rgb(243, 242, 239);
+    padding-left: 1em;
+}
+
+.produto-carrinho{
+    border: 1px solid rgb(243, 242, 239);
+    padding: 1em;
+    background-color: rgba(255, 255, 255, 0.158);
+}
+
+.botao-remover-item{
+    text-align: center;
+    font-weight: 900;
+    margin-right: 0.7em;
+    font-family: 'Courier New', Courier, monospace;
+    background: red;
+    border-radius: 100%;
+}
+
+input[type='number']::-webkit-inner-spin-button, 
+input[type='number']::-webkit-outer-spin-button { 
+    opacity: 1;
+}
+
+.produto-carrinho-total{
+    text-align: center;
+    color: black;
+    font-size: 1.5em;
+    border: 2px solid gold;
+    background-color: rgba(255, 217, 0, 0.13);
+}
+
+.foto-carrinho{
+    height:150px;
+    width:auto;
+    margin-left: 2em;
+    margin-right:2em;
+}

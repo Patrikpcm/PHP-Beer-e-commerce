@@ -47,14 +47,22 @@
                 $values[1] != 'mais' ? $max_preco = (double)$values[1] : $max_preco = 10000.00;
             }
         }
-        $sql_tipo = substr_replace($sql_tipo, '', -2); //removendo a última vírgula
-        //echo ($sql_tipo);
+        if(strlen($sql_tipo) > 0){
+            $sql_tipo = substr_replace($sql_tipo, '', -2); //removendo a última vírgula
+            //echo ($sql_tipo);
 
-        //criando a query
-        $sql =  'SELECT * FROM produtos WHERE estilo IN ('.$sql_tipo.')'.
-                ' AND ibu BETWEEN '.$min_ibu.' AND '.$max_ibu.
-                ' AND abv BETWEEN '.$min_abv.' AND '.$max_abv.
-                ' AND preco BETWEEN '.$min_preco.' AND '.$max_preco;
+            //criando a query
+            $sql =  'SELECT * FROM produtos WHERE estilo IN ('.$sql_tipo.')'.
+                    ' AND ibu BETWEEN '.$min_ibu.' AND '.$max_ibu.
+                    ' AND abv BETWEEN '.$min_abv.' AND '.$max_abv.
+                    ' AND preco BETWEEN '.$min_preco.' AND '.$max_preco;
+        }
+        else{
+            //query para caso não seja selecionda nenhum tipo de cerveja
+            $sql =  'SELECT * FROM produtos WHERE ibu BETWEEN '.$min_ibu.' AND '.$max_ibu.
+                    ' AND abv BETWEEN '.$min_abv.' AND '.$max_abv.
+                    ' AND preco BETWEEN '.$min_preco.' AND '.$max_preco;
+        }
     }
 
     $resultado_id = mysqli_query($link, $sql);
@@ -95,7 +103,7 @@
                     echo (              '<li class="list-group-item"><strong class="card-preco">R$'.$registro['preco'].'</strong></li>');
                     echo (          '</ul>');
                     echo (          '<div class="card-body align-self-center">');
-                    echo (              '<a href="#" type="button" class="btn btn-search">Adicionar à geladeira</a>');
+                    echo (              '<button class="btn btn-search" adicionar-ao-carrinho value="'.$registro['id_produto'].'">Adicionar à geladeira</button>');
                     echo (          '</div>');
                     echo (      '</div>');
                     echo (  '</div>');
@@ -120,7 +128,7 @@
                     echo('              <li class="list-group-item"><strong class="card-preco-promo">R$'.$registro['preco'].'</strong> <strong class="card-preco">R$'.$precoFinal.'</strong></li>');
                     echo('          </ul>');
                     echo('          <div class="card-body align-self-center">');
-                    echo('              <a href="#" type="button" class="btn btn-search">Adicionar à geladeira</a>');
+                    echo (              '<button class="btn btn-search" adicionar-ao-carrinho value="'.$registro['id_produto'].'">Adicionar à geladeira</button>');
                     echo('          </div>');
                     echo('      </div>');
                     echo('  </div>');

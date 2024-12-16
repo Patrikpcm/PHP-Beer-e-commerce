@@ -25,7 +25,7 @@
             echo (              '<li class="list-group-item"><strong class="card-preco">R$'.$registro['preco'].'</strong></li>');
             echo (          '</ul>');
             echo (          '<div class="card-body align-self-center">');
-            echo (              '<a href="#" type="button" class="btn btn-search">Adicionar à geladeira</a>');
+            echo (              '<button class="btn btn-search adicionar-ao-carrinho" id_produto="'.$registro['id_produto'].'">Adicionar à geladeira</button>');
             echo (          '</div>');
             echo (      '</div>');
             echo (  '</div>');

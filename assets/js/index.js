@@ -28,3 +28,14 @@ $('[exibir-texto]').on('click', function(){
     $(this).removeClass("text-hide");
     //$(this).toggleClass("text-hide");
 });
+
+$(document).ready(function() {
+    $('.adicionar-ao-carrinho').click(function() {
+        var produtoId = $(this).data('produto_id');
+        $.ajax({
+            url: 'add_carrinho.php',
+            method: 'POST',
+            data: { produtoId: produtoId }
+        });
+    });
+});

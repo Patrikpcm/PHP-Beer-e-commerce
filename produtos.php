@@ -12,11 +12,11 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-
+   
     <!--Título-->
     <title>Barûk Alkh - O Pub de Khazad-dûm!</title>
 </head>
-<body>
+<body id=container-code >
     <header>
         <nav class="navbar navbar-expand-lg nav-bg navbar-dark"><!--data-bs-theme="dark"-->
             <div class="container-fluid">
@@ -118,7 +118,7 @@
                         </li>
                         
                         <li class="nav-item">
-                            <a class="nav-link ms-2" href="#"><i class="fa-solid fa-cart-shopping fa-xs me-1"></i> Geladeira </a>
+                            <a class="nav-link ms-2" href="carrinho.php"><i class="fa-solid fa-cart-shopping fa-xs me-1"></i> Geladeira </a>
                         </li>
                     </ul>
                 </div>
@@ -371,18 +371,20 @@
         </div> <!--Fim do container-->
     </footer>
 
+    
+</body>
     <!--Google icons-->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=login" />
 
      <!--Font Awesome-->
      <script src="https://kit.fontawesome.com/96d124ffc8.js" crossorigin="anonymous"></script>
     
+     <!--Estilo CSS-->
+     <link rel="stylesheet" href="assets/css/style.css" type="text/css">
+
      <!--Javascript-->
      <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
      <script type="text/Javascript" src="assets/js/produtos.js"></script>
-    
-     <!--Estilo CSS-->
-     <link rel="stylesheet" href="assets/css/style.css" type="text/css">
-</body>
+
 </html>

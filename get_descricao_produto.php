@@ -55,7 +55,7 @@
                     
                     echo ('    <div><h2 class="preco-descricao"> R$ 22,35</h2></div>');
                     echo ('    <div class="card-body mt-3">');
-                    echo ('        <a href="#" type="button" class="btn btn-add">Adicionar à geladeira</a>');
+                    echo (              '<button class="btn btn-search adicionar-ao-carrinho" id_produto="'.$registro['id_produto'].'">Adicionar à geladeira</button>');
                     echo ('    </div>');
                     echo ('</div>'); 
                 }
@@ -85,7 +85,7 @@
                     $precoFinal = number_format($precoFinal, 2,);
                     echo ('   <div class="d-flex"><h2 class="preco-descricao card-preco-promo">R$ '.$preco.' <h2 class="card-preco"> R$ '.$precoFinal.'</h2></h2> </div>');
                     echo ('    <div class="card-body mt-3">');
-                    echo ('        <a href="#" type="button" class="btn btn-add">Adicionar à geladeira</a>');
+                    echo (              '<button class="btn btn-search adicionar-ao-carrinho" id_produto="'.$registro['id_produto'].'">Adicionar à geladeira</button>');
                     echo ('    </div>');
                     echo ('</div>'); 
                 }
