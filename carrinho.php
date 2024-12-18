@@ -34,10 +34,10 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link" href="#lancamentos">Lançamentos</a>
+                            <a class="nav-link" href="index.php#lancamentos">Lançamentos</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#promocoes">Promoções</a>
+                            <a class="nav-link" href="index.php#promocoes">Promoções</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="acessorios.php">Acessórios</a>
@@ -90,15 +90,15 @@
                             <?php
                                 if($logado == 1){
                                     echo '  <ul class="dropdown-menu"> 
-                                                <li><a class="dropdown-item" href="minha_conta.html">Minha Conta</a></li>
-                                                <li><a class="dropdown-item" href="produtos.html">Meus pedidos</a></li>
+                                                <li><a class="dropdown-item" href="minha_conta.php">Minha Conta</a></li>
+                                                <li><a class="dropdown-item" href="pedidos.php">Meus pedidos</a></li>
                                                 <form action="logout.php" method="POST">
                                                     <button type="submit" class="btn btn-search mt-2 ms-3">Sair</button>                                        
                                                 </form>
                                             </ul>';
                                 }
                                 else{
-                                    echo '<ul class="dropdown-menu '; if($erro==1 || $registrado==1){echo 'show';} echo'">
+                                    echo '<ul class="dropdown-menu '; if($erro==1 || $erro==2 || $registrado==1){echo 'show';} echo'">
                                         <div class="col-md-12">
                                             <form id="form_login" action="login.php" method="POST">
                                                 <div class="form-group">
@@ -113,6 +113,9 @@
                                                 if($erro == 1){
                                                     echo '<p class="ms-1 mt-3" style="color:#FF0000">Usuário ou senha inválidos</p> ';
                                                 }
+                                                if($erro == 2){
+                                                    echo '<p class="ms-1 mt-3" style="color:#FF0000">Você precisa estar logado para finalizar o pedido</p> ';
+                                                }
                                                 if($registrado == 1){
                                                     echo '<p class="ms-2 mt-3" style="color:#0000CD">Bem vindo! Efetue login com suas credenciais.</font> ';
                                                 }
@@ -125,7 +128,7 @@
                         </li>
                         
                         <li class="nav-item">
-                            <a class="nav-link ms-2" href="#"><i class="fa-solid fa-cart-shopping fa-xs me-1"></i> Geladeira </a>
+                            <a class="nav-link ms-2" href="carrinho.php"><i class="fa-solid fa-cart-shopping fa-xs me-1"></i> Geladeira </a>
                         </li>
                     </ul>
                 </div>
@@ -169,7 +172,23 @@
             <div class="row mt-4">
                 <div class="col-md-12" id="carrinho">
                     <!--Aqui serão impressos os produtos do carrinho-->
-                </div>                 
+                </div>                
+            </div>
+
+            <div class="row mt-4">
+                <div class="col-md-12">
+                    <?php 
+                    if(isset($_SESSION['carrinho'])){
+                        if($logado){
+                            echo '<button class="btn btn-search finalizar-pedido" id="finalizar-pedido">Finalizar pedido</button>';
+                        }
+                        else{
+                            echo '<a type="button" class="btn btn-search finalizar-pedido" href="carrinho.php?erro=2">Finalizar pedido</a>';
+                        }
+                    }
+                    ?>
+                </div>                
+            </div>
         </div> <!--Fim do container-->
     </section>
     

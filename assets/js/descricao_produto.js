@@ -1,5 +1,7 @@
 $(window).on('load', function(){ //load para quando a pagina esta carregada
-    //caso o usuário acesse diretamente a página de produtos, sem nenhum filtro aplicado.
+    observer = new Observador();
+    observer.observar();
+    
     if (location.search.slice(1) == ''){
         window.location.href = "produtos.php";
     }
@@ -62,7 +64,45 @@ $(document).ready(function(){
             });     
         }
     });
+
+    $('[adicionar-ao-carrinho]').on('click', function(){
+        //console.log($(this).val());
+        $.ajax({
+            url: 'add_carrinho.php',
+            method: 'POST',
+            data: { id_produto: $(this).val()},
+            success: function(response) {
+                // Atualizar o carrinho na página
+                //alert ("Produto adicionado ao carrinho com sucesso!");
+            }
+        });
+    });
 });
 
+class Observador{
+    observer;
 
-    
+    observar(){ 
+        this.observer = new MutationObserver(function(){        
+            /* Função para adicionar produtos ao carrinho de compras (geladeira)*/
+            $('[adicionar-ao-carrinho]').on('click', function(){
+                //console.log($(this).val());
+                $.ajax({
+                    url: 'add_carrinho.php',
+                    method: 'POST',
+                    data: { id_produto: $(this).val()},
+                    success: function(response) {
+                        // Atualizar o carrinho na página
+                        //alert ("Produto adicionado ao carrinho com sucesso!");
+                    }
+                });
+            });
+        });
+        var divArray = document.getElementById('descricao_produto');
+        this.observer.observe(divArray, { attributes: false, childList: true, subtree: true });
+    }
+
+    classesFound(){
+        this.observer.disconnect();
+    };
+}

@@ -17,5 +17,5 @@
     $nota = (int)$data[1]->value;
 
     $sql = "INSERT INTO avaliacoes_produtos VALUES(NULL, $id_produto, $id_usuario, '$texto', $nota)";
-    
+    mysqli_query($link, $sql);  
 ?>

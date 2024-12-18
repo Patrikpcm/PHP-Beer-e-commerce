@@ -1,3 +1,14 @@
+<?php
+    session_start(); //iniciando as variáveis de sessão para podermos ter acesso
+
+    !isset($_SESSION['email']) ? $logado = 0 : $logado=1; //Define qual dropdown será exibido para o usuário
+    
+    !isset($_SESSION['carrinho']) ? $carrinho = 0 : $carrinho=1;
+
+    //area para recuperar o erro de falha de login
+	$erro = isset($_GET['erro']) ? $_GET['erro'] : 0;
+	$registrado = isset($_GET['registrado']) ? $_GET['registrado'] : 0;
+?>
 
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -23,10 +34,10 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link" href="#lancamentos">Lançamentos</a>
+                            <a class="nav-link" href="index.php#lancamentos">Lançamentos</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#promocoes">Promoções</a>
+                            <a class="nav-link" href="index.php#promocoes">Promoções</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="acessorios.php">Acessórios</a>
@@ -73,23 +84,47 @@
                         <button class="btn btn-search" type="submit">Escavar</button>
                     </form>
                     <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                
                        <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false"> <i class="fa-solid fa-right-to-bracket fa-xs me-1"></i> Conta </a>
-                                <ul class="dropdown-menu">
-                                    <div class="col-md-12">
-                                        <form id="form_login" action="login.php" method="POST">
-                                            <div class="form-group">
-                                                <input type="text" class="form-control" id="campo_email" name="email" placeholder="Email" />
-                                            </div>
-                                            <div class="form-group">
-                                                <input type="password" class="form-control red" id="campo_senha" name="senha" placeholder="Senha" />
-                                            </div>
-                                            <button type="buttom" class="btn btn-search mt-2 ms-1" id="btn_login">Entrar</button>
-                                            <a href="cadastrese.php" role="buttom" class="btn btn-light mt-2 ms-1">Cadastrar</a>   
-                                              
-                                    </form>
-                                </div>
-                            </ul>
+                            <?php
+                                if($logado == 1){
+                                    echo '  <ul class="dropdown-menu"> 
+                                                <li><a class="dropdown-item" href="minha_conta.php">Minha Conta</a></li>
+                                                <li><a class="dropdown-item" href="pedidos.php">Meus pedidos</a></li>
+                                                <form action="logout.php" method="POST">
+                                                    <button type="submit" class="btn btn-search mt-2 ms-3">Sair</button>                                        
+                                                </form>
+                                            </ul>';
+                                }
+                                else{
+                                    echo '<ul class="dropdown-menu '; if($erro==1 || $erro==2 || $registrado==1){echo 'show';} echo'">
+                                        <div class="col-md-12">
+                                            <form id="form_login" action="login.php" method="POST">
+                                                <div class="form-group">
+                                                    <input type="text" class="form-control" id="campo_email" name="email" placeholder="Email" />
+                                                </div>
+                                                <div class="form-group">
+                                                    <input type="password" class="form-control red" id="campo_senha" name="senha" placeholder="Senha" />
+                                                </div>
+                                                <button type="buttom" class="btn btn-search mt-2 ms-1" id="btn_login">Entrar</button>
+                                                <a href="cadastrese.php" role="buttom" class="btn btn-light mt-2 ms-1">Cadastrar</a>';
+                                                
+                                                if($erro == 1){
+                                                    echo '<p class="ms-1 mt-3" style="color:#FF0000">Usuário ou senha inválidos</p> ';
+                                                }
+                                                if($erro == 2){
+                                                    echo '<p class="ms-1 mt-3" style="color:#FF0000">Você precisa estar logado para finalizar o pedido</p> ';
+                                                }
+                                                if($registrado == 1){
+                                                    echo '<p class="ms-2 mt-3" style="color:#0000CD">Bem vindo! Efetue login com suas credenciais.</font> ';
+                                                }
+                                             echo '   
+                                            </form>
+                                        </div>
+                                    </ul>';
+                                }
+                            ?>
                         </li>
                         
                         <li class="nav-item">
@@ -129,44 +164,19 @@
             </div>
             <div class="row">
                 <div class="col-md-12 align-items-center">
-                    <h1 style="text-align: center;"><strong style="border-bottom: 3px solid black;">Sua geladeira</strong></h1>
-                    <a href="index.php" class="nav-link" style="float: right;"><i class="fa-solid fa-arrow-left fa-lg me-2"></i> Voltar às compras</a>
+                    <h1 style="text-align: center;"><strong style="border-bottom: 3px solid black;">Detalhes do pedido</strong></h1>
+                    <a href="pedidos.php" class="nav-link" style="float: right;"><i class="fa-solid fa-arrow-left fa-lg me-2"></i> Voltar aos pedidos</a>
                 </div>
             </div>
 
             <div class="row mt-4">
-                <div class="col-md-12">
-                   <!-- <div style="text-align: center;">
-                        <h2>Você não adicionou nenhum item ao carrinho!</h2>
-                    </div>-->
-                    <table id="tabela-carrinho">
-                        <tr>
-                            <th></th>
-                            <th class="titulo-carrinho" width="900">PRODUTO</th>
-                            <th class="titulo-carrinho" width="150">PREÇO</th>
-                            <th class="titulo-carrinho" width="150">QUANTIDADE</th>
-                            <th class="titulo-carrinho" width="150">TOTAL</th>
-                        </tr>
-                        <tr class="tabela-linha">
-                            <td> <button class="botao-remover-item">X</button></td>
-                            <td class="produto-carrinho">PRODUTO</td>
-                            <td class="produto-carrinho">PREÇO</td>
-                            <td class="produto-carrinho d-flex justify-content-center">
-                                <input style="width: 4em; text-align: center;" value="1" type="number" id="quantidade-item" min="1">
-                            </td>
-                            <td class="produto-carrinho">total</td>
-                        </tr>
-                        <tr>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td class="produto-carrinho-total">total</td>
-                        </tr>
-                    </table> 
-                </div>                 
+                <div class="col-md-12" id="pedido">
+                    <!--Aqui serão impressos os detalhes do pedido-->
+                </div>                
+            </div>
         </div> <!--Fim do container-->
     </section>
+    
 
     <footer id="rodape">
         <div class="container">
@@ -246,7 +256,7 @@
      <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-     <script type="text/Javascript" src="assets/js/inde.js"></script>
+     <script type="text/Javascript" src="assets/js/pedido_detalhe.js"></script>
     
      <!--Estilo CSS-->
      <link rel="stylesheet" href="assets/css/style.css" type="text/css">

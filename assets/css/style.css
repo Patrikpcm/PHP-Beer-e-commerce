@@ -406,3 +406,20 @@ input[type='number']::-webkit-outer-spin-button {
     margin-left: 2em;
     margin-right:2em;
 }
+
+.finalizar-pedido{
+    float: right;
+}
+
+
+/*      AREÁ PEDIDOS    */
+.descricao-pedido{
+    text-decoration: none;
+    color: black;
+    font-size: 1.3em;
+}
+
+.descricao-botao{
+    float: right;
+    margin-top: 7%;
+}

@@ -123,7 +123,7 @@
                         </li>
                         
                         <li class="nav-item">
-                            <a class="nav-link ms-2" href="#"><i class="fa-solid fa-cart-shopping fa-xs me-1"></i> Geladeira </a>
+                            <a class="nav-link ms-2" href="carrinho.php"><i class="fa-solid fa-cart-shopping fa-xs me-1"></i> Geladeira </a>
                         </li>
                     </ul>
                 </div>

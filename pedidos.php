@@ -3,6 +3,8 @@
 
     !isset($_SESSION['email']) ? $logado = 0 : $logado=1; //Define qual dropdown será exibido para o usuário
     
+    !isset($_SESSION['carrinho']) ? $carrinho = 0 : $carrinho=1;
+
     //area para recuperar o erro de falha de login
 	$erro = isset($_GET['erro']) ? $_GET['erro'] : 0;
 	$registrado = isset($_GET['registrado']) ? $_GET['registrado'] : 0;
@@ -32,10 +34,10 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link" href="#lancamentos">Lançamentos</a>
+                            <a class="nav-link" href="index.php#lancamentos">Lançamentos</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#promocoes">Promoções</a>
+                            <a class="nav-link" href="index.php#promocoes">Promoções</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="acessorios.php">Acessórios</a>
@@ -88,15 +90,15 @@
                             <?php
                                 if($logado == 1){
                                     echo '  <ul class="dropdown-menu"> 
-                                                <li><a class="dropdown-item" href="minha_conta.php">Minha Conta</a></li>
-                                                <li><a class="dropdown-item" href="pedidos.php">Meus pedidos</a></li>
+                                                <li><a class="dropdown-item" href="minha_conta.html">Minha Conta</a></li>
+                                                <li><a class="dropdown-item" href="produtos.html">Meus pedidos</a></li>
                                                 <form action="logout.php" method="POST">
                                                     <button type="submit" class="btn btn-search mt-2 ms-3">Sair</button>                                        
                                                 </form>
                                             </ul>';
                                 }
                                 else{
-                                    echo '<ul class="dropdown-menu '; if($erro==1 || $registrado==1){echo 'show';} echo'">
+                                    echo '<ul class="dropdown-menu '; if($erro==1 || $erro==2 || $registrado==1){echo 'show';} echo'">
                                         <div class="col-md-12">
                                             <form id="form_login" action="login.php" method="POST">
                                                 <div class="form-group">
@@ -110,6 +112,9 @@
                                                 
                                                 if($erro == 1){
                                                     echo '<p class="ms-1 mt-3" style="color:#FF0000">Usuário ou senha inválidos</p> ';
+                                                }
+                                                if($erro == 2){
+                                                    echo '<p class="ms-1 mt-3" style="color:#FF0000">Você precisa estar logado para finalizar o pedido</p> ';
                                                 }
                                                 if($registrado == 1){
                                                     echo '<p class="ms-2 mt-3" style="color:#0000CD">Bem vindo! Efetue login com suas credenciais.</font> ';
@@ -130,34 +135,6 @@
             </div>
         </nav>
     </header>
-    
-    <section id="home">
-        <div class="home-wrap">
-
-            <img class="home-bg" src="assets/img/bn_dwarfs.jpeg"alt="">
-        
-            <div class="home-content">
-                <div class="container">
-                    <div class="row d-flex align-items-center" style="margin-top: 1%;">
-                        <div class="col-md-12">
-                            <div class="d-flex justify-content-center">
-                                <h1> <strong class="home-text">Barûk Alkh - O Pub de Khazad-Dûm!</strong></h1>             
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row d-flex align-items-center" style="margin-bottom: 1%;">
-                        <div class="col-md-12">
-                            <div class="d-flex justify-content-center">
-                                <img src="assets/img/Baruk-Alkh_logo.png" width="25%" alt="">
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-
-    </section>
 
     <section id="informacoes">
         <div class="container">
@@ -179,106 +156,30 @@
             </div>
         </div>
     </section>
-    
-    <div id="descricao_produto">
-        <section id="lancamentos">
-            <div class="container" >
-                <div class="row pt-2 mt-3 mb-2">
-                    <hr class="custom-hr">
-                </div>
-                <div class="row d-flex">
-                    <div class="col-md-3 align-items-center">
-                        <div class="col-md-12">
-                            <div >
-                                <h1 class="mt-3"><strong>Lançamentos</strong></h1>
-                                <img class="d-none d-md-block mt-4" src="assets/img/lancamento_dwarf.jpeg" width="100%"  alt="Anão com canecas de chopp">
-                            </div>
-                        </div>
-                    </div>
 
-                    <div class="col-md-9" >
-                        <div class="row row-cols-1 row-cols-md-3 g-3" id="lista-lancamentos">
-                            
-                                <!--ÁREA ONDE SERÃO INSERIDOS OS LANÇAMENTOS-->
-            
-
-                        </div> <!--Fim da lista de lançamentos-->
-                    
-                    </div> <!--Fim da col-md-9 de lançamentos-->
-
-                </div> <!--Fim da row Lançamentos-->
-                
-                <div class="row">
-                    <div class="col-md-12 d-flex align-self-center">
-                        <a href="produtos.php" class="link-mais-produtos">Mais produtos</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-        
-        <section id="promocoes">
-            <div class="container mt-5" >
-                <div class="row pt-2 mt-3 mb-2">
-                    <hr class="custom-hr">
-                </div>
-                <div class="row d-flex">
-                    <div class="col-md-3 align-items-center">
-                        <div class="col-md-12">
-                            <div >
-                                <h1 class="mt-3"><strong>Promoções</strong></h1>
-                                <img class="d-none d-md-block mt-4" src="assets/img/grey_beard.jpeg" width="100%"  alt="Anão com canecas de chopp">
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-9">
-                        <div class="row row-cols-1 row-cols-md-3 g-3" id="lista-promocoes">
-                                <!--Area onde é exibido o conteúdo-->
-                        </div> 
-                    </div>
-                </div> <!--Fim da row Lançamentos-->
-                
-                <div class="row">
-                    <div class="col-md-12 d-flex align-self-center">
-                        <a href="produtos.php" class="link-mais-produtos">Mais produtos</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="acessorios">
-        <div class="container mt-5" >
+    <section id="geladeira">
+        <div class="container" >
             <div class="row pt-2 mt-3 mb-2">
                 <hr class="custom-hr">
             </div>
-            <div class="row d-flex">
-                <div class="col-md-3 align-items-center">
-                    <div class="col-md-12">
-                        <div >
-                            <h1 class="mt-3"><strong>Acessórios</strong></h1>
-                            <img class="d-none d-md-block mt-4" src="assets/img/axe_shield.jpeg" width="100%"  alt="Anão com canecas de chopp">
-                        </div>
-                    </div>
+            <div class="row">
+                <div class="col-md-12 align-items-center">
+                    <h1 style="text-align: center;"><strong style="border-bottom: 3px solid black;">Seus pedidos</strong></h1>
+                    <a href="produtos.php" class="nav-link" style="float: right;"><i class="fa-solid fa-arrow-left fa-lg me-2"></i> Voltar às compras</a>
                 </div>
+            </div>
 
-                <div class="col-md-9">
-                    <div class="row row-cols-1 row-cols-md-3 g-3" id="lista-acessorios">
-                            <!--Área onde é exibido o conteúdo PHP-->
-                    </div> 
-                
-                </div>
+            <div class="row mt-4">
+                <div class="col-md-12" id="pedidos">
+                    <!--Aqui serão impressos os pedidos realizados-->
+                </div>                
+            </div>
 
-                <div class="row">
-                    <div class="col-md-12 d-flex align-self-center">
-                        <a href="acessorios.php" class="link-mais-produtos">Mais produtos</a>
-                    </div>
-                </div>
-
-            </div> <!--Fim da row Lançamentos-->
             
-        </div>
-        </section>
-    </div>
+        </div> <!--Fim do container-->
+    </section>
+    
+
     <footer id="rodape">
         <div class="container">
             <div class="row">
@@ -357,7 +258,7 @@
      <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-     <script type="text/Javascript" src="assets/js/index.js"></script>
+     <script type="text/Javascript" src="assets/js/pedidos.js"></script>
     
      <!--Estilo CSS-->
      <link rel="stylesheet" href="assets/css/style.css" type="text/css">

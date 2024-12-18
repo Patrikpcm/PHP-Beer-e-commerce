@@ -83,8 +83,8 @@
                             <?php
                                 if($logado == 1){
                                     echo '  <ul class="dropdown-menu"> 
-                                                <li><a class="dropdown-item" href="minha_conta.html">Minha Conta</a></li>
-                                                <li><a class="dropdown-item" href="produtos.html">Meus pedidos</a></li>
+                                                <li><a class="dropdown-item" href="minha_conta.php">Minha Conta</a></li>
+                                                <li><a class="dropdown-item" href="pedidos.php">Meus pedidos</a></li>
                                                 <form action="logout.php" method="POST">
                                                     <button type="submit" class="btn btn-search mt-2 ms-3">Sair</button>                                        
                                                 </form>
