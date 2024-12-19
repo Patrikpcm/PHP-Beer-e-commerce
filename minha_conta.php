@@ -3,7 +3,7 @@
 	O if ternário serve para que, caso a página seja acessada sem os dados de erro
 	no link, não seja gerado código de erro mesmo assim.
 	*/
-	$erro_email = isset($_GET['erro_email']) ? $_GET['erro_email'] : 0;
+	$atualizado = isset($_GET['atualizado']) ? $_GET['atualizado'] : 0;
 
 ?>
 
@@ -39,7 +39,7 @@
                     <div class="row d-flex align-items-center" style="margin-top: 1%;">
                         <div class="col-md-12">
                             <div class="d-flex justify-content-center">
-                                <h1> <strong class="home-text">Faça parte da família dos anões!</strong></h1>             
+                                <h1> <strong class="home-text">Seus dados</strong></h1>             
                             </div>
                         </div>
                     </div>
@@ -47,50 +47,21 @@
                         <div class="col-md-6 d-flex">
                             <div class="col-md-12 align-self-center">
                                 
-                                <form id="form_cadastrese" action="registra_usuario.php" method="post">
+                                <form id="form_cadastrese" action="atualiza_usuario.php" method="post">
                                     
-                                    <div class="row mt-4">
-                                        <label for="nome" class="col-sm-2 col-form-label">Nome</label>
-                                        <div class="col-sm-10">
-                                            <input type="text" class="form-control" id="nome" name="nome" placeholder="" required="required">
-                                        </div>
-                                    </div>
-                
-                                    <div class="row mt-3">
-                                        <label for="email" class="col-sm-2 col-form-label">email</label>
-                                        <div class="col-sm-10">
-                                            <input type="email" class="form-control" id="email" name="email" placeholder="email@exemplo.com" required="required">
-                                        </div>
-                                        <?php
-                                            if($erro_email)
-                                                echo '<p class="mt-2 text-center" style="color:#FF0000">O email informado já esta cadastrado.</p>';
-                                        ?>
-                                    </div>
-                                    
-                                    <div class="row mt-3">
-                                        <label for="endereco" class="col-sm-2 col-form-label">Endereço</label>
-                                        <div class="col-sm-10">
-                                            <input type="text" class="form-control" id="endereco" name="endereco" placeholder="" required="required">
-                                        </div>
-                                    </div>
-
-                                    <div class="row mt-3">
-                                        <label for="telefone" class="col-sm-2 col-form-label">Telefone</label>
-                                        <div class="col-sm-10">
-                                            <input type="tel" class="form-control" id="telefone" name="telefone" placeholder="(ddd)telefone" pattern="[0-9]{11}" required="required">
-                                        </div>
-                                    </div>
-
-                                    <div class="row mt-3">
-                                        <label for="senha" class="col-sm-2 col-form-label">Senha</label>
-                                        <div class="col-sm-10">
-                                            <input type="password" class="form-control" id="senha" name="senha" placeholder="Senha" required="required">
-                                        </div>
-                                    </div>
-                                    <div class="row d-flex justify-content-center ms-5">
-                                        <button type="submit" class="btn btn-search col-6 mt-4">Cadastre-se</button>
-                                    </div>
                                 </form>
+                                <div id="botao-atualizar" class="row d-flex justify-content-center ms-5">
+                                    <button class="btn btn-search col-6 mt-4">Atualizar dados?</button>
+                                </div>
+
+                                <div id="botao-enviar" class="row d-flex justify-content-center ms-5">
+                                    
+                                </div>
+                                <?php
+                                    if($atualizado == 1){
+                                        echo '<p style="color:blue; text-align:center" class="mt-3 ms-5"> Informações atualizadas com sucesso!</p>';
+                                    }
+                                ?>
                             </div>
                         </div>
                         <div class="col-md-6 mt-1 d-none d-md-flex justify-content-center">
@@ -204,6 +175,7 @@
      <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+     <script type="text/Javascript" src="assets/js/minha_conta.js"></script>
     
      <!--Estilo CSS-->
      <link rel="stylesheet" href="assets/css/style.css" type="text/css">

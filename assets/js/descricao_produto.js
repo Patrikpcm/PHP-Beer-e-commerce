@@ -50,15 +50,17 @@ $(document).ready(function(){
         //console.log(location.search.slice(1));
         //data: {data : dados},)
         if($('#texto-comentario').val().length > 0){
+            var id_produto = location.search.slice(1).split('&');
             $.ajax({ 
                 url: 'set_comentario.php',    
                 method: 'POST',
                 datatype: 'JSON',
-                data: {data : JSON.stringify($('#form-comentario').serializeArray()), id_produto : location.search.slice(1).split('&')},
+                data: {data : JSON.stringify($('#form-comentario').serializeArray()), id_produto : id_produto[0]},
                 //data: {data : dados},
                 success: function(data){
                     $('#texto-comentario').val(''); //removendo o conteúdo do campo após a publicação da avaliação
                     alert('Avaliação inclusa com sucesso, agradecemos sua colaboração!');
+                    $('#form-comentario').html(data);
                     window.location.href = ("descricao_produto.php?"+location.search.slice(1).split('&'));
                 }
             });     

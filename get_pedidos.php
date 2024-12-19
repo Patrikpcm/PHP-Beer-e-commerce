@@ -1,15 +1,13 @@
 <?php
     session_start();
     
-    require_once('bd.class.php');
-
-    $objDb = new bd(); //criando um novo objeto
-    $link = $objDb->conecta_mysql();
-    
-
     if(!isset($_SESSION['email'])){ //verificar se o usuário esta logado
         header('Location: index.php?erro=1');
     }
+
+    require_once('bd.class.php');
+    $objDb = new bd(); //criando um novo objeto
+    $link = $objDb->conecta_mysql();
 
     $id_usuario = $_SESSION['id_usuario'];
     $sql = "SELECT * FROM pedidos_usuarios WHERE id_usuario = $id_usuario ORDER BY data_pedido";
