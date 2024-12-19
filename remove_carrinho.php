@@ -3,7 +3,7 @@
    
     $id_produto = $_POST['id_produto'];
 
-    for($i = 0; $i< count($_SESSION['carrinho']); $i++){
+    for($i = 0; $i<=count($_SESSION['carrinho']); $i++){
         if($_SESSION['carrinho'][$i]['id_produto'] == $id_produto){
             unset($_SESSION['carrinho'][$i]);
             break;

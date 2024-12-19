@@ -55,15 +55,16 @@ class Observador{
 }
 
 function onClickRemove(deleteButton) {
-    //console.log(deleteButton.value);
+    var id_produto = deleteButton.value;
     let row = deleteButton.parentElement.parentElement;
     row.parentNode.removeChild(row);
+    //console.log(id_produto);
     $.ajax({ 
         url: 'remove_carrinho.php',
         method: 'POST',
-        data: {id_produto : deleteButton.value},
+        data: {id_produto : id_produto},
         success: function(data){
-            alert("produto removido!");
+            //alert("produto removido!");
             location.href = "carrinho.php";
         }
     });   

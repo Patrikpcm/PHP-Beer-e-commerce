@@ -2,7 +2,6 @@
     session_start(); //iniciando as variáveis de sessão para podermos ter acesso
 
     !isset($_SESSION['email']) ? $logado = 0 : $logado=1; //Define qual dropdown será exibido para o usuário
-    
     !isset($_SESSION['carrinho']) ? $carrinho = 0 : $carrinho=1;
 
     //area para recuperar o erro de falha de login

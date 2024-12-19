@@ -1,4 +1,6 @@
 <?php
+    session_start();
+    !isset($_SESSION['email']) ? $logado = 0 : $logado=1;
     $erro = isset($_GET['erro']) ? $_GET['erro'] : 0;
 	$registrado = isset($_GET['registrado']) ? $_GET['registrado'] : 0;
 ?>
