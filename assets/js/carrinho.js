@@ -64,6 +64,7 @@ function onClickRemove(deleteButton) {
         data: {id_produto : deleteButton.value},
         success: function(data){
             alert("produto removido!");
+            location.href = "carrinho.php";
         }
     });   
 }
