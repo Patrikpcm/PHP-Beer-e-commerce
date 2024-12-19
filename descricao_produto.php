@@ -193,7 +193,7 @@
                         <input type="radio" name="star" id="star5" value="1"><label for="star5"></label>
                     </div>
                     <div class="col-md-2">
-                        <button type="button" id="btn-comentario" class="btn btn-comentario" <?=$logado == 0 ? disabled : enabled ?>>Enviar</button>
+                        <button type="button" id="btn-comentario" class="btn btn-comentario" <?=$logado == 0 ? 'disabled' : '' ?>>Enviar</button>
                         <?=$logado == 0 ? '<p style="color:#FF0000">Você precisa estar logado para deixar uma avaliação</p>' : '' ?> 
                     </div>
                 </form>
