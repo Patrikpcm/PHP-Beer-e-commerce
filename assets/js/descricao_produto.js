@@ -74,6 +74,7 @@ $(document).ready(function(){
             method: 'POST',
             data: { id_produto: $(this).val()},
             success: function(response) {
+                alert("Produto adicionado ao carrinho!");
                 // Atualizar o carrinho na página
                 //alert ("Produto adicionado ao carrinho com sucesso!");
             }
