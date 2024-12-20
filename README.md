@@ -29,7 +29,7 @@
     Esse projeto foi desenvolvido com a intenção de somar ao meu portfólio pessoal e poder aplicar e mostrar, a quem possa interessar, meus conhecimentos nas tecnologias utilizadas.  
 </p>
 <p>
-    Ele foi desenvolvido utilizando <strong style="color:rgb(204, 123, 48);" >HTML</strong>, <strong style="color:rgb(56, 87, 189);">CSS</strong>, <strong style="color:rgb(107, 56, 189);">BOOTSTRAP</strong>, <strong style="color:rgb(199, 185, 62);">JavaScript</strong>, <strong>PHP</strong>, banco de dados <strong style="color:rgb(39, 55, 109);">My</strong><strong style="color:rgb(189, 132, 8);">SQL</strong> e diversas requisições assíncronas utilizando <strong style="color:rgb(8, 119, 14);">AJAX</strong>.
+    Ele foi desenvolvido utilizando <strong style="color: #FF8000;" >HTML</strong>, <strong style="color:rgb(56, 87, 189);">CSS</strong>, <strong style="color:rgb(107, 56, 189);">BOOTSTRAP</strong>, <strong style="color:rgb(199, 185, 62);">JavaScript</strong>, <strong>PHP</strong>, banco de dados <strong style="color:rgb(39, 55, 109);">My</strong><strong style="color:rgb(189, 132, 8);">SQL</strong> e diversas requisições assíncronas utilizando <strong style="color:rgb(8, 119, 14);">AJAX</strong>.
 </p>
 
 <div align="center"> <img src="assets/img/baruk_alkh_produtos.png" width="300px" height="150px">  <img src="assets/img/baruk_alkh_promocoes.png " width="300px" height="150px"> </div>
