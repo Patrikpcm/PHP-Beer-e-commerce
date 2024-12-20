@@ -32,8 +32,8 @@
     Ele foi desenvolvido utilizando <strong style="color:rgb(204, 123, 48);" >HTML</strong>, <strong style="color:rgb(56, 87, 189);">CSS</strong>, <strong style="color:rgb(107, 56, 189);">BOOTSTRAP</strong>, <strong style="color:rgb(199, 185, 62);">JavaScript</strong>, <strong>PHP</strong>, banco de dados <strong style="color:rgb(39, 55, 109);">My</strong><strong style="color:rgb(189, 132, 8);">SQL</strong> e diversas requisições assíncronas utilizando <strong style="color:rgb(8, 119, 14);">AJAX</strong>.
 </p>
 
-<div align="center"> <img src="assets/img/baruk_alkh_produtos.png" width="480px">  <img src="assets/img/baruk_alkh_promocoes.png " width="480px" height="244px"> </div>
-<div align="center"> <img src="assets/img/baruk_alkh_cadastro.png" width="480px" height="244px">  <img src="assets/img/baruk_alkh_carrinho.png " width="480px" height="244px"> </div>
+<div align="center"> <img src="assets/img/baruk_alkh_produtos.png" width="280px">  <img src="assets/img/baruk_alkh_promocoes.png " width="280px" height="144px"> </div>
+<div align="center"> <img src="assets/img/baruk_alkh_cadastro.png" width="280px" height="144px">  <img src="assets/img/baruk_alkh_carrinho.png " width="280px" height="144px"> </div>
 
 <br>
 <br>
