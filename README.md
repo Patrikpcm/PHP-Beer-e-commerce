@@ -2,7 +2,7 @@
 
 <div align="center"> <h3> Esse repositório contém arquivos do projeto em PHP de um e-commerce de cervejas e acessórios. </h3> </div>
 
-<div align="center"> <h4><a>Acesse o projeto publicado!</a></h4> </div>
+<div align="center"> <h4><a href="https://barukalkh.patrikgogola.com.br/index.php" target="_blank">Acesse o projeto publicado!</a></h4> </div>
 
 <br>
 <br>
@@ -80,7 +80,7 @@
 <br>
 <br>
 <br>
-<div align="center"> <h3>O projeto esta publicado em meu portófio e pode ser visualizado <a href="https://barukalkh.patrikgogola.com.br/index.php">clicando aqui!</a></h3> </div>
+<div align="center"> <h3>O projeto esta publicado em meu portófio e pode ser visualizado <a href="https://barukalkh.patrikgogola.com.br/index.php" target="_blank">clicando aqui!</a></h3> </div>
 
 <br>
-<div align="center"> <h3>Para visualizar meu portfólio pessoal e saber mais sobre mim e outros projetos, <a href="https://www.patrikgogola.com.br/">clique aqui!</a></h3> </div>
+<div align="center"> <h3>Para visualizar meu portfólio pessoal e saber mais sobre mim e outros projetos, <a href="https://www.patrikgogola.com.br/" target="_blank">clique aqui!</a></h3> </div>
